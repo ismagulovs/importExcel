@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="brk-imports">
+        <jta-data-source>java:jboss/datasources/brkImportDS</jta-data-source>
+<!--        <class>kz.brk.imports.model.StcTbl00ChislnstRabot</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl02OsnPkzFinHozDtlst</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl03ObshObmPrdUsl</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl04ObmPrdUslOsn</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl05DhdRlzPrdUsl</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl06DhdRlzPrdUslOsn</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl08ObshRashPredp</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl10RezFinHozDtlPrdp</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl12GrpPredpDhdUbtk</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl18NachNlgDrPlat</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl20FactPrchslNlgPlt</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl22SostVzmRschPrdp</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl24BalancePrdp</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl26KrtSrAktv</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl28Zapasy</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl29DlgSrAktv</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl32KrtSrObz</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl34DlgSrObz</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl36Capital</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl40DvzhDenSrdOperDtlt</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl42DvzhDenSrdInvstDtlt</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl44DvzhDenSrdFinDtlt</class>-->
+<!--        <class>kz.brk.imports.model.StcTbl46ValiutPozc</class>-->
+        <properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+            <property name="hibernate-dialect" value="org.hiberbate.dialect.OracleDialect"/>
+            <property name="hibernate.physical_naming_strategy" value="kz.brk.imports.CustomPhysicalNamingStrategy"/>
+        </properties>
+    </persistence-unit>
+</persistence>
