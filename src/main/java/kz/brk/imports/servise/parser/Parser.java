@@ -4,7 +4,6 @@ import kz.brk.imports.servise.parser.tables.*;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.jboss.resteasy.plugins.providers.multipart.InputPart;
 
@@ -100,7 +99,7 @@ public class Parser {
         return true;
     }
 
-    public void parseExcel(InputPart part){
+    public String parseExcel(InputPart part){
         if(part.getMediaType().getSubtype().equals("vnd.ms-excel")){
             try {
                 HSSFWorkbook workbook = new HSSFWorkbook(part.getBody(InputStream.class, null));
@@ -120,54 +119,43 @@ public class Parser {
                 e.printStackTrace();
             }
         }
+        return "ok";
     }
 
     private void parseRow(Sheet sheet){
         for(Row row: sheet){
             if(row.getRowNum() > 7) {
-                if (row.getCell(1).getStringCellValue().length() == 5) {
-                    tbl00.parseTbl(row);
-                    tbl02.parseTbl(row);
-                    tbl03.parseTbl(row);
-//                    tbl04.parseTbl(row);
-//                    tbl05.parseTbl(row);
-//
-//                    tbl06.parseTbl(row);
-//                    tbl08.parseTbl(row);
-//                    tbl10.parseTbl(row);
-//                    tbl12.parseTbl(row);
-//                    tbl18.parseTbl(row);
-//
-//                    tbl20.parseTbl(row);
-//                    tbl22.parseTbl(row);
-//                    tbl24.parseTbl(row);
-//                    tbl26.parseTbl(row);
-//                    tbl28.parseTbl(row);
-//
-//                    tbl29.parseTbl(row);
-//                    tbl32.parseTbl(row);
-//                    tbl34.parseTbl(row);
-//                    tbl36.parseTbl(row);
-//                    tbl40.parseTbl(row);
-//
-//                    tbl42.parseTbl(row);
-//                    tbl44.parseTbl(row);
-//                    tbl46.parseTbl(row);
-//                    while (cells.hasNext()) {
-//                        Cell cell = cells.next();
-//                        int cellType = cell.getCellType();
-//                        switch (cellType) {
-//                            case Cell.CELL_TYPE_STRING:
-//                                result += cell.getStringCellValue() + "|";
-//                                break;
-//                            case Cell.CELL_TYPE_NUMERIC:
-//                                result += cell.getNumericCellValue() + "|";
-//                                break;
-//                            default:
-//                                result += "|";
-//                                break;
-//                        }
-//                    }
+                if(row.getCell(1) != null){
+                    if (row.getCell(1).getStringCellValue().length() == 5) {
+                        System.out.println(row.getRowNum());
+                        tbl00.parseTbl(row);
+                        tbl02.parseTbl(row);
+                        tbl03.parseTbl(row);
+                        tbl04.parseTbl(row);
+                        tbl05.parseTbl(row);
+
+                        tbl06.parseTbl(row);
+                        tbl08.parseTbl(row);
+                        tbl10.parseTbl(row);
+                        tbl12.parseTbl(row);
+                        tbl18.parseTbl(row);
+
+                        tbl20.parseTbl(row);
+                        tbl22.parseTbl(row);
+                        tbl24.parseTbl(row);
+                        tbl26.parseTbl(row);
+                        tbl28.parseTbl(row);
+
+                        tbl29.parseTbl(row);
+                        tbl32.parseTbl(row);
+                        tbl34.parseTbl(row);
+                        tbl36.parseTbl(row);
+                        tbl40.parseTbl(row);
+
+                        tbl42.parseTbl(row);
+                        tbl44.parseTbl(row);
+                        tbl46.parseTbl(row);
+                    }
                 }
             }
         }

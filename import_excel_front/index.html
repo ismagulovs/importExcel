@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Загрузка в базу</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <form id="data" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required/>
+        <button>ok</button>
+    </form>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $("form#data").submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: 'http://localhost:8080/brk/api/import/upload',
+                type: 'POST',
+                data: formData,
+                success: function (data) {
+                    alert(data)
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+        });
+    });
+</script>
+</html>
