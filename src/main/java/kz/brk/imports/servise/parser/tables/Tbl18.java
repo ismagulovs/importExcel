@@ -18,22 +18,22 @@ public class Tbl18 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld051Vsego(CheckInt.isNumeric(row.getCell(53).getStringCellValue())? Integer.parseInt(row.getCell(53).getStringCellValue()) : 0 );
-        item.setFld052CorpPdhNlg(CheckInt.isNumeric(row.getCell(54).getStringCellValue())? Integer.parseInt(row.getCell(54).getStringCellValue()) : 0 );
-        item.setFld053IndPdhNlg(CheckInt.isNumeric(row.getCell(55).getStringCellValue())? Integer.parseInt(row.getCell(55).getStringCellValue()) : 0 );
-        item.setFld054SocNlg(CheckInt.isNumeric(row.getCell(56).getStringCellValue())? Integer.parseInt(row.getCell(56).getStringCellValue()) : 0 );
-        item.setFld055OtchSocStrh(CheckInt.isNumeric(row.getCell(57).getStringCellValue())? Integer.parseInt(row.getCell(57).getStringCellValue()) : 0 );
-        item.setFld056ZemNlg(CheckInt.isNumeric(row.getCell(58).getStringCellValue())? Integer.parseInt(row.getCell(58).getStringCellValue()) : 0 );
-        item.setFld057NlgImsh(CheckInt.isNumeric(row.getCell(59).getStringCellValue())? Integer.parseInt(row.getCell(59).getStringCellValue()) : 0 );
-        item.setFld058NlgTs(CheckInt.isNumeric(row.getCell(60).getStringCellValue())? Integer.parseInt(row.getCell(60).getStringCellValue()) : 0 );
-        item.setFld059NlgDobStm(CheckInt.isNumeric(row.getCell(61).getStringCellValue())? Integer.parseInt(row.getCell(61).getStringCellValue()) : 0 );
-        item.setFld060Akcz(CheckInt.isNumeric(row.getCell(62).getStringCellValue())? Integer.parseInt(row.getCell(62).getStringCellValue()) : 0 );
-        item.setFld061NlgSpecPlat(CheckInt.isNumeric(row.getCell(63).getStringCellValue())? Integer.parseInt(row.getCell(63).getStringCellValue()) : 0 );
-        item.setFld062NlgSvrhPrb(CheckInt.isNumeric(row.getCell(64).getStringCellValue())? Integer.parseInt(row.getCell(64).getStringCellValue()) : 0 );
-        item.setFld063PrSpecPlt(CheckInt.isNumeric(row.getCell(65).getStringCellValue())? Integer.parseInt(row.getCell(65).getStringCellValue()) : 0 );
-        item.setFld064DrObzPlat(CheckInt.isNumeric(row.getCell(66).getStringCellValue())? Integer.parseInt(row.getCell(66).getStringCellValue()) : 0 );
-        item.setFld065TmzhPlat(CheckInt.isNumeric(row.getCell(67).getStringCellValue())? Integer.parseInt(row.getCell(67).getStringCellValue()) : 0 );
-        item.setFld066PrchslObzVzn(CheckInt.isNumeric(row.getCell(68).getStringCellValue())? Integer.parseInt(row.getCell(68).getStringCellValue()) : 0 );
+        item.setFld051Vsego(CheckInt.cellToInt(row.getCell(53)));
+        item.setFld052CorpPdhNlg(CheckInt.cellToInt(row.getCell(54)));
+        item.setFld053IndPdhNlg(CheckInt.cellToInt(row.getCell(55)));
+        item.setFld054SocNlg(CheckInt.cellToInt(row.getCell(56)));
+        item.setFld055OtchSocStrh(CheckInt.cellToInt(row.getCell(57)));
+        item.setFld056ZemNlg(CheckInt.cellToInt(row.getCell(58)));
+        item.setFld057NlgImsh(CheckInt.cellToInt(row.getCell(59)));
+        item.setFld058NlgTs(CheckInt.cellToInt(row.getCell(60)));
+        item.setFld059NlgDobStm(CheckInt.cellToInt(row.getCell(61)));
+        item.setFld060Akcz(CheckInt.cellToInt(row.getCell(62)));
+        item.setFld061NlgSpecPlat(CheckInt.cellToInt(row.getCell(63)));
+        item.setFld062NlgSvrhPrb(CheckInt.cellToInt(row.getCell(64)));
+        item.setFld063PrSpecPlt(CheckInt.cellToInt(row.getCell(65)));
+        item.setFld064DrObzPlat(CheckInt.cellToInt(row.getCell(66)));
+        item.setFld065TmzhPlat(CheckInt.cellToInt(row.getCell(67)));
+        item.setFld066PrchslObzVzn(CheckInt.cellToInt(row.getCell(68)));
 
         em.persist(item);
     }

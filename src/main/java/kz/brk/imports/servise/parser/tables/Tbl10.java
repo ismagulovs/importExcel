@@ -18,13 +18,13 @@ public class Tbl10 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld037ValPrb(CheckInt.isNumeric(row.getCell(39).getStringCellValue())? Integer.parseInt(row.getCell(39).getStringCellValue()) : 0 );
-        item.setFld038RashRlzcPu(CheckInt.isNumeric(row.getCell(40).getStringCellValue())? Integer.parseInt(row.getCell(40).getStringCellValue()) : 0 );
-        item.setFld039AdmRash(CheckInt.isNumeric(row.getCell(41).getStringCellValue())? Integer.parseInt(row.getCell(41).getStringCellValue()) : 0 );
-        item.setFld040RashFin(CheckInt.isNumeric(row.getCell(42).getStringCellValue())? Integer.parseInt(row.getCell(42).getStringCellValue()) : 0 );
-        item.setFld041PrRash(CheckInt.isNumeric(row.getCell(43).getStringCellValue())? Integer.parseInt(row.getCell(43).getStringCellValue()) : 0 );
-        item.setFld042PrblUbtk(CheckInt.isNumeric(row.getCell(44).getStringCellValue())? Integer.parseInt(row.getCell(44).getStringCellValue()) : 0 );
-        item.setFld043RashCorpPn(CheckInt.isNumeric(row.getCell(45).getStringCellValue())? Integer.parseInt(row.getCell(45).getStringCellValue()) : 0 );
+        item.setFld037ValPrb(CheckInt.cellToInt(row.getCell(39)));
+        item.setFld038RashRlzcPu(CheckInt.cellToInt(row.getCell(40)));
+        item.setFld039AdmRash(CheckInt.cellToInt(row.getCell(41)));
+        item.setFld040RashFin(CheckInt.cellToInt(row.getCell(42)));
+        item.setFld041PrRash(CheckInt.cellToInt(row.getCell(43)));
+        item.setFld042PrblUbtk(CheckInt.cellToInt(row.getCell(44)));
+        item.setFld043RashCorpPn(CheckInt.cellToInt(row.getCell(45)));
 
         em.persist(item);
     }

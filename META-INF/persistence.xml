@@ -27,9 +27,14 @@
 <!--        <class>kz.brk.imports.model.StcTbl46ValiutPozc</class>-->
         <properties>
             <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate-dialect" value="org.hiberbate.dialect.OracleDialect"/>
             <property name="hibernate.physical_naming_strategy" value="kz.brk.imports.CustomPhysicalNamingStrategy"/>
         </properties>
+        <!--properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate-dialect" value="org.hiberbate.dialect.PostgreSQL9Dialect"/>
+        </properties-->
     </persistence-unit>
 </persistence>

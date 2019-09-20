@@ -18,15 +18,15 @@ public class Tbl08 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld028Vsego(CheckInt.isNumeric(row.getCell(30).getStringCellValue())? Integer.parseInt(row.getCell(30).getStringCellValue()) : 0 );
-        item.setFld029PrzvRhd(CheckInt.isNumeric(row.getCell(31).getStringCellValue())? Integer.parseInt(row.getCell(31).getStringCellValue()) : 0 );
-        item.setFld030MatZatr(CheckInt.isNumeric(row.getCell(32).getStringCellValue())? Integer.parseInt(row.getCell(32).getStringCellValue()) : 0 );
-        item.setFld031AmrtOsnSr(CheckInt.isNumeric(row.getCell(33).getStringCellValue())? Integer.parseInt(row.getCell(33).getStringCellValue()) : 0 );
-        item.setFld032AmrtNemat(CheckInt.isNumeric(row.getCell(34).getStringCellValue())? Integer.parseInt(row.getCell(34).getStringCellValue()) : 0 );
-        item.setFld033FondZpr(CheckInt.isNumeric(row.getCell(35).getStringCellValue())? Integer.parseInt(row.getCell(35).getStringCellValue()) : 0 );
-        item.setFld034DenPsbRab(CheckInt.isNumeric(row.getCell(36).getStringCellValue())? Integer.parseInt(row.getCell(36).getStringCellValue()) : 0 );
-        item.setFld035PrZtr(CheckInt.isNumeric(row.getCell(37).getStringCellValue())? Integer.parseInt(row.getCell(37).getStringCellValue()) : 0 );
-        item.setFld036NeprzvRsh(CheckInt.isNumeric(row.getCell(38).getStringCellValue())? Integer.parseInt(row.getCell(38).getStringCellValue()) : 0 );
+        item.setFld028Vsego(CheckInt.cellToInt(row.getCell(30)));
+        item.setFld029PrzvRhd(CheckInt.cellToInt(row.getCell(31)));
+        item.setFld030MatZatr(CheckInt.cellToInt(row.getCell(32)));
+        item.setFld031AmrtOsnSr(CheckInt.cellToInt(row.getCell(33)));
+        item.setFld032AmrtNemat(CheckInt.cellToInt(row.getCell(34)));
+        item.setFld033FondZpr(CheckInt.cellToInt(row.getCell(35)));
+        item.setFld034DenPsbRab(CheckInt.cellToInt(row.getCell(36)));
+        item.setFld035PrZtr(CheckInt.cellToInt(row.getCell(37)));
+        item.setFld036NeprzvRsh(CheckInt.cellToInt(row.getCell(38)));
 
         em.persist(item);
     }

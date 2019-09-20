@@ -50,33 +50,33 @@ public class Parser {
             if(row.getRowNum() > 7) {
 //                Iterator<Cell> cells = row.iterator();
                 if(row.getCell(1).getStringCellValue().length() == 5){
-//                    tbl00.parseTbl(row);
+                    tbl00.parseTbl(row);
                     tbl02.parseTbl(row);
-//                    tbl03.parseTbl(row);
-//                    tbl04.parseTbl(row);
-//                    tbl05.parseTbl(row);
-//
-//                    tbl06.parseTbl(row);
-//                    tbl08.parseTbl(row);
-//                    tbl10.parseTbl(row);
-//                    tbl12.parseTbl(row);
-//                    tbl18.parseTbl(row);
-//
-//                    tbl20.parseTbl(row);
-//                    tbl22.parseTbl(row);
-//                    tbl24.parseTbl(row);
-//                    tbl26.parseTbl(row);
-//                    tbl28.parseTbl(row);
-//
-//                    tbl29.parseTbl(row);
-//                    tbl32.parseTbl(row);
-//                    tbl34.parseTbl(row);
-//                    tbl36.parseTbl(row);
-//                    tbl40.parseTbl(row);
-//
-//                    tbl42.parseTbl(row);
-//                    tbl44.parseTbl(row);
-//                    tbl46.parseTbl(row);
+                    tbl03.parseTbl(row);
+                    tbl04.parseTbl(row);
+                    tbl05.parseTbl(row);
+
+                    tbl06.parseTbl(row);
+                    tbl08.parseTbl(row);
+                    tbl10.parseTbl(row);
+                    tbl12.parseTbl(row);
+                    tbl18.parseTbl(row);
+
+                    tbl20.parseTbl(row);
+                    tbl22.parseTbl(row);
+                    tbl24.parseTbl(row);
+                    tbl26.parseTbl(row);
+                    tbl28.parseTbl(row);
+
+                    tbl29.parseTbl(row);
+                    tbl32.parseTbl(row);
+                    tbl34.parseTbl(row);
+                    tbl36.parseTbl(row);
+                    tbl40.parseTbl(row);
+
+                    tbl42.parseTbl(row);
+                    tbl44.parseTbl(row);
+                    tbl46.parseTbl(row);
 //                    while (cells.hasNext()) {
 //                        Cell cell = cells.next();
 //                        int cellType = cell.getCellType();

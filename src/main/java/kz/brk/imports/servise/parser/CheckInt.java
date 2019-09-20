@@ -38,32 +38,44 @@ public class CheckInt {
     }
 
     public static int cellToInt(Cell cell){
-        switch (cell.getCellType()){
-            case NUMERIC: return (int) cell.getNumericCellValue();
-            case STRING: {
-                try {
-                    return Integer.parseInt(cell.getStringCellValue());
-                }catch (Exception e){
-                    return 0;
+        if(cell == null)
+        {
+            return 0;
+        }else {
+            switch (cell.getCellType()) {
+                case NUMERIC:
+                    return (int) cell.getNumericCellValue();
+                case STRING: {
+                    try {
+                        return Integer.parseInt(cell.getStringCellValue());
+                    } catch (Exception e) {
+                        return 0;
+                    }
                 }
+                default:
+                    return 0;
             }
-            default:
-                return 0;
         }
     }
 
     public static BigDecimal cellToBigDecimal(Cell cell){
-        switch (cell.getCellType()){
-            case NUMERIC: return BigDecimal.valueOf(cell.getNumericCellValue());
-            case STRING: {
-                try {
-                    return BigDecimal.valueOf(Long.parseLong(cell.getStringCellValue().replaceAll("\\s+","")));
-                }catch (Exception e){
-                    return BigDecimal.valueOf(0);
+        if(cell == null)
+        {
+            return BigDecimal.valueOf(0);
+        }else {
+            switch (cell.getCellType()) {
+                case NUMERIC:
+                    return BigDecimal.valueOf(cell.getNumericCellValue());
+                case STRING: {
+                    try {
+                        return BigDecimal.valueOf(Long.parseLong(cell.getStringCellValue().replaceAll("\\s+", "")));
+                    } catch (Exception e) {
+                        return BigDecimal.valueOf(0);
+                    }
                 }
+                default:
+                    return BigDecimal.valueOf(0);
             }
-            default:
-                return BigDecimal.valueOf(0);
         }
     }
 }

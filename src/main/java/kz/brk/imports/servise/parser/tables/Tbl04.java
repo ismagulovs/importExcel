@@ -17,11 +17,11 @@ public class Tbl04 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld010ObjemPrdUsl(CheckInt.isNumeric(row.getCell(12).getStringCellValue())? Integer.parseInt(row.getCell(12).getStringCellValue()) : 0 );
-        item.setFld011ObjemRlz(CheckInt.isNumeric(row.getCell(13).getStringCellValue())? Integer.parseInt(row.getCell(13).getStringCellValue()) : 0 );
-        item.setFld012PrdUslIsp(CheckInt.isNumeric(row.getCell(14).getStringCellValue())? Integer.parseInt(row.getCell(14).getStringCellValue()) : 0 );
-        item.setFld013IzmZps(CheckInt.isNumeric(row.getCell(15).getStringCellValue())? Integer.parseInt(row.getCell(15).getStringCellValue()) : 0 );
-        item.setFld014PrstUmn(CheckInt.isNumeric(row.getCell(16).getStringCellValue())? Integer.parseInt(row.getCell(16).getStringCellValue()) : 0 );
+        item.setFld010ObjemPrdUsl(CheckInt.cellToInt(row.getCell(12)));
+        item.setFld011ObjemRlz(CheckInt.cellToInt(row.getCell(13)));
+        item.setFld012PrdUslIsp(CheckInt.cellToInt(row.getCell(14)));
+        item.setFld013IzmZps(CheckInt.cellToInt(row.getCell(15)));
+        item.setFld014PrstUmn(CheckInt.cellToInt(row.getCell(16)));
 
         em.persist(item);
     }

@@ -18,23 +18,23 @@ public class Tbl42 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld213PstpDenzhSr(CheckInt.isNumeric(row.getCell(215).getStringCellValue())? Integer.parseInt(row.getCell(215).getStringCellValue()) : 0 );
-        item.setFld214RlzcFinAktv(CheckInt.isNumeric(row.getCell(216).getStringCellValue())? Integer.parseInt(row.getCell(216).getStringCellValue()) : 0 );
-        item.setFld215RlzcAkcDl(CheckInt.isNumeric(row.getCell(217).getStringCellValue())? Integer.parseInt(row.getCell(217).getStringCellValue()) : 0 );
-        item.setFld216RlzcDlgInstr(CheckInt.isNumeric(row.getCell(218).getStringCellValue())? Integer.parseInt(row.getCell(218).getStringCellValue()) : 0 );
-        item.setFld217PgshZaimDrOrg(CheckInt.isNumeric(row.getCell(219).getStringCellValue())? Integer.parseInt(row.getCell(219).getStringCellValue()) : 0 );
-        item.setFld218PstpFfoDgv(CheckInt.isNumeric(row.getCell(220).getStringCellValue())? Integer.parseInt(row.getCell(220).getStringCellValue()) : 0 );
-        item.setFld219PrPstp(CheckInt.isNumeric(row.getCell(221).getStringCellValue())? Integer.parseInt(row.getCell(221).getStringCellValue()) : 0 );
-        item.setFld220VbtDenSrds(CheckInt.isNumeric(row.getCell(222).getStringCellValue())? Integer.parseInt(row.getCell(222).getStringCellValue()) : 0 );
-        item.setFld221PrbFinAktv(CheckInt.isNumeric(row.getCell(223).getStringCellValue())? Integer.parseInt(row.getCell(223).getStringCellValue()) : 0 );
-        item.setFld222PrbAkcDl(CheckInt.isNumeric(row.getCell(224).getStringCellValue())? Integer.parseInt(row.getCell(224).getStringCellValue()) : 0 );
-        item.setFld223PrbDlgInstr(CheckInt.isNumeric(row.getCell(225).getStringCellValue())? Integer.parseInt(row.getCell(225).getStringCellValue()) : 0 );
-        item.setFld224PrdsZaimDrOrg(CheckInt.isNumeric(row.getCell(226).getStringCellValue())? Integer.parseInt(row.getCell(226).getStringCellValue()) : 0 );
-        item.setFld225KrtSrch(CheckInt.isNumeric(row.getCell(227).getStringCellValue())? Integer.parseInt(row.getCell(227).getStringCellValue()) : 0 );
-        item.setFld226DlgSrch(CheckInt.isNumeric(row.getCell(228).getStringCellValue())? Integer.parseInt(row.getCell(228).getStringCellValue()) : 0 );
-        item.setFld227PltFfoDgv(CheckInt.isNumeric(row.getCell(229).getStringCellValue())? Integer.parseInt(row.getCell(229).getStringCellValue()) : 0 );
-        item.setFld228PrVbt(CheckInt.isNumeric(row.getCell(230).getStringCellValue())? Integer.parseInt(row.getCell(230).getStringCellValue()) : 0 );
-        item.setFld229ChstSumDenSr(CheckInt.isNumeric(row.getCell(231).getStringCellValue())? Integer.parseInt(row.getCell(231).getStringCellValue()) : 0 );
+        item.setFld213PstpDenzhSr(CheckInt.cellToInt(row.getCell(215)));
+        item.setFld214RlzcFinAktv(CheckInt.cellToInt(row.getCell(216)));
+        item.setFld215RlzcAkcDl(CheckInt.cellToInt(row.getCell(217)));
+        item.setFld216RlzcDlgInstr(CheckInt.cellToInt(row.getCell(218)));
+        item.setFld217PgshZaimDrOrg(CheckInt.cellToInt(row.getCell(219)));
+        item.setFld218PstpFfoDgv(CheckInt.cellToInt(row.getCell(220)));
+        item.setFld219PrPstp(CheckInt.cellToInt(row.getCell(221)));
+        item.setFld220VbtDenSrds(CheckInt.cellToInt(row.getCell(222)));
+        item.setFld221PrbFinAktv(CheckInt.cellToInt(row.getCell(223)));
+        item.setFld222PrbAkcDl(CheckInt.cellToInt(row.getCell(224)));
+        item.setFld223PrbDlgInstr(CheckInt.cellToInt(row.getCell(225)));
+        item.setFld224PrdsZaimDrOrg(CheckInt.cellToInt(row.getCell(226)));
+        item.setFld225KrtSrch(CheckInt.cellToInt(row.getCell(227)));
+        item.setFld226DlgSrch(CheckInt.cellToInt(row.getCell(228)));
+        item.setFld227PltFfoDgv(CheckInt.cellToInt(row.getCell(229)));
+        item.setFld228PrVbt(CheckInt.cellToInt(row.getCell(230)));
+        item.setFld229ChstSumDenSr(CheckInt.cellToInt(row.getCell(231)));
 
         em.persist(item);
     }

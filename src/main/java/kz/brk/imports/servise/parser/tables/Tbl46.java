@@ -18,13 +18,13 @@ public class Tbl46 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld245AktvInostrVlt(CheckInt.isNumeric(row.getCell(247).getStringCellValue())? Integer.parseInt(row.getCell(247).getStringCellValue()) : 0 );
-        item.setFld246KrtAktvInostrVlt(CheckInt.isNumeric(row.getCell(248).getStringCellValue())? Integer.parseInt(row.getCell(248).getStringCellValue()) : 0 );
-        item.setFld247DlgAktvInostrVlt(CheckInt.isNumeric(row.getCell(249).getStringCellValue())? Integer.parseInt(row.getCell(249).getStringCellValue()) : 0 );
-        item.setFld248ObzInostrVlt(CheckInt.isNumeric(row.getCell(250).getStringCellValue())? Integer.parseInt(row.getCell(250).getStringCellValue()) : 0 );
-        item.setFld249KrtObzInostrVlt(CheckInt.isNumeric(row.getCell(251).getStringCellValue())? Integer.parseInt(row.getCell(251).getStringCellValue()) : 0 );
-        item.setFld250DlgObzInostrVlt(CheckInt.isNumeric(row.getCell(252).getStringCellValue())? Integer.parseInt(row.getCell(252).getStringCellValue()) : 0 );
-        item.setFld251ChstPzcInostrVlt(CheckInt.isNumeric(row.getCell(253).getStringCellValue())? Integer.parseInt(row.getCell(253).getStringCellValue()) : 0 );
+        item.setFld245AktvInostrVlt(CheckInt.cellToInt(row.getCell(247)));
+        item.setFld246KrtAktvInostrVlt(CheckInt.cellToInt(row.getCell(248)));
+        item.setFld247DlgAktvInostrVlt(CheckInt.cellToInt(row.getCell(249)));
+        item.setFld248ObzInostrVlt(CheckInt.cellToInt(row.getCell(250)));
+        item.setFld249KrtObzInostrVlt(CheckInt.cellToInt(row.getCell(251)));
+        item.setFld250DlgObzInostrVlt(CheckInt.cellToInt(row.getCell(252)));
+        item.setFld251ChstPzcInostrVlt(CheckInt.cellToInt(row.getCell(253)));
 
         em.persist(item);
     }

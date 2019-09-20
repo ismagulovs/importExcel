@@ -32,7 +32,7 @@ public class WebService {
     public Response getPotokDateList() {
         String res;
         try{
-            res = parser.parse("C:\\Users\\SultanI\\work\\java\\test.xls")?"ok" :"false";
+            res = parser.parse("C:\\distr\\my files\\БРК\\projects\\importExcel\\test_excel.xls")?"ok" :"false";
         }catch (Exception e){
             e.printStackTrace();
         }

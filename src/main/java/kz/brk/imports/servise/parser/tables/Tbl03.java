@@ -18,10 +18,10 @@ public class Tbl03 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld006ObjemRlz(CheckInt.isNumeric(row.getCell(8).getStringCellValue())? Integer.parseInt(row.getCell(8).getStringCellValue()) : 0 );
-        item.setFld007PrdUslIsp(CheckInt.isNumeric(row.getCell(9).getStringCellValue())? Integer.parseInt(row.getCell(9).getStringCellValue()) : 0 );
-        item.setFld008IzmZps(CheckInt.isNumeric(row.getCell(10).getStringCellValue())? Integer.parseInt(row.getCell(10).getStringCellValue()) : 0 );
-        item.setFld009PrstUmn(CheckInt.isNumeric(row.getCell(11).getStringCellValue())? Integer.parseInt(row.getCell(11).getStringCellValue()) : 0 );
+        item.setFld006ObjemRlz(CheckInt.cellToInt(row.getCell(8)));
+        item.setFld007PrdUslIsp(CheckInt.cellToInt(row.getCell(9)));
+        item.setFld008IzmZps(CheckInt.cellToInt(row.getCell(10)));
+        item.setFld009PrstUmn(CheckInt.cellToInt(row.getCell(11)));
 
         em.persist(item);
     }

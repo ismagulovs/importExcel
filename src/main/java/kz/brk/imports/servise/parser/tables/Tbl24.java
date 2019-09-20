@@ -18,20 +18,20 @@ public class Tbl24 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld105BlsAktvNchl(CheckInt.isNumeric(row.getCell(107).getStringCellValue())? Integer.parseInt(row.getCell(107).getStringCellValue()) : 0 );
-        item.setFld106BlsAktvKnc(CheckInt.isNumeric(row.getCell(108).getStringCellValue())? Integer.parseInt(row.getCell(108).getStringCellValue()) : 0 );
-        item.setFld107KrtAktvNchl(CheckInt.isNumeric(row.getCell(109).getStringCellValue())? Integer.parseInt(row.getCell(109).getStringCellValue()) : 0 );
-        item.setFld108KrtAktvKnc(CheckInt.isNumeric(row.getCell(110).getStringCellValue())? Integer.parseInt(row.getCell(110).getStringCellValue()) : 0 );
-        item.setFld109DlgAktvNchl(CheckInt.isNumeric(row.getCell(111).getStringCellValue())? Integer.parseInt(row.getCell(111).getStringCellValue()) : 0 );
-        item.setFld110DlgAktvKnc(CheckInt.isNumeric(row.getCell(112).getStringCellValue())? Integer.parseInt(row.getCell(112).getStringCellValue()) : 0 );
-        item.setFld111BlsObzNchl(CheckInt.isNumeric(row.getCell(113).getStringCellValue())? Integer.parseInt(row.getCell(113).getStringCellValue()) : 0 );
-        item.setFld112BlsObzKnc(CheckInt.isNumeric(row.getCell(114).getStringCellValue())? Integer.parseInt(row.getCell(114).getStringCellValue()) : 0 );
-        item.setFld113KrtObzNchl(CheckInt.isNumeric(row.getCell(115).getStringCellValue())? Integer.parseInt(row.getCell(115).getStringCellValue()) : 0 );
-        item.setFld114KrtObzKnc(CheckInt.isNumeric(row.getCell(116).getStringCellValue())? Integer.parseInt(row.getCell(116).getStringCellValue()) : 0 );
-        item.setFld115DlgObzNchl(CheckInt.isNumeric(row.getCell(117).getStringCellValue())? Integer.parseInt(row.getCell(117).getStringCellValue()) : 0 );
-        item.setFld116DlgObzKnc(CheckInt.isNumeric(row.getCell(118).getStringCellValue())? Integer.parseInt(row.getCell(118).getStringCellValue()) : 0 );
-        item.setFld117KptlNchl(CheckInt.isNumeric(row.getCell(119).getStringCellValue())? Integer.parseInt(row.getCell(119).getStringCellValue()) : 0 );
-        item.setFld118KptlKnc(CheckInt.isNumeric(row.getCell(120).getStringCellValue())? Integer.parseInt(row.getCell(120).getStringCellValue()) : 0 );
+        item.setFld105BlsAktvNchl(CheckInt.cellToInt(row.getCell(107)));
+        item.setFld106BlsAktvKnc(CheckInt.cellToInt(row.getCell(108)));
+        item.setFld107KrtAktvNchl(CheckInt.cellToInt(row.getCell(109)));
+        item.setFld108KrtAktvKnc(CheckInt.cellToInt(row.getCell(110)));
+        item.setFld109DlgAktvNchl(CheckInt.cellToInt(row.getCell(111)));
+        item.setFld110DlgAktvKnc(CheckInt.cellToInt(row.getCell(112)));
+        item.setFld111BlsObzNchl(CheckInt.cellToInt(row.getCell(113)));
+        item.setFld112BlsObzKnc(CheckInt.cellToInt(row.getCell(114)));
+        item.setFld113KrtObzNchl(CheckInt.cellToInt(row.getCell(115)));
+        item.setFld114KrtObzKnc(CheckInt.cellToInt(row.getCell(116)));
+        item.setFld115DlgObzNchl(CheckInt.cellToInt(row.getCell(117)));
+        item.setFld116DlgObzKnc(CheckInt.cellToInt(row.getCell(118)));
+        item.setFld117KptlNchl(CheckInt.cellToInt(row.getCell(119)));
+        item.setFld118KptlKnc(CheckInt.cellToInt(row.getCell(120)));
 
         em.persist(item);
     }
