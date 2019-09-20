@@ -2,6 +2,7 @@ package kz.brk.imports.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 @Builder
 @Entity
@@ -19,10 +20,10 @@ public class StcTbl12GrpPredpDhdUbtk {
   private int god;
   private int fld044ObshKolPrdp;
   private int fld045KolPrdpPrb;
-  private int fld046PrcnObshKolPrb;
+  private BigDecimal fld046PrcnObshKolPrb;
   private int fld047SumPrb;
   private int fld048KolPrdpUbtk;
-  private int fld049PrcnObshKolUbtk;
+  private BigDecimal fld049PrcnObshKolUbtk;
   private int fld050SumUbtk;
   @Builder.Default
   private int relevance = 1;

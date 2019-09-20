@@ -20,10 +20,10 @@ public class Tbl12 {
 
         item.setFld044ObshKolPrdp(CheckInt.cellToInt(row.getCell(46)));
         item.setFld045KolPrdpPrb(CheckInt.cellToInt(row.getCell(47)));
-        item.setFld046PrcnObshKolPrb(CheckInt.cellToInt(row.getCell(48)));
+        item.setFld046PrcnObshKolPrb(CheckInt.cellToBigDecimal(row.getCell(48)));
         item.setFld047SumPrb(CheckInt.cellToInt(row.getCell(49)));
         item.setFld048KolPrdpUbtk(CheckInt.cellToInt(row.getCell(50)));
-        item.setFld049PrcnObshKolUbtk(CheckInt.cellToInt(row.getCell(51)));
+        item.setFld049PrcnObshKolUbtk(CheckInt.cellToBigDecimal(row.getCell(51)));
         item.setFld050SumUbtk(CheckInt.cellToInt(row.getCell(52)));
 
         em.persist(item);
