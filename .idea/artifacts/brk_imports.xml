@@ -51,6 +51,10 @@
         </element>
       </element>
       <element id="javaee-facet-resources" facet="brk_imports/web/Web" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="artifact" artifact-name="brk_imports:war exploded" />
     </root>
   </artifact>
 </component>

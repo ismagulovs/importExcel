@@ -9,6 +9,12 @@
     </properties>
     <root id="archive" name="brk_imports-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="brk_imports:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="jpa-descriptors" facet="brk_imports/jpa/JPA" />
+        </element>
+      </element>
+      <element id="artifact" artifact-name="brk_imports" />
     </root>
   </artifact>
 </component>

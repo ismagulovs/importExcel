@@ -11,7 +11,8 @@ import java.util.Date;
 @Table(name = "stc_tbl_05_dhd_rlz_prd_usl")
 public class StcTbl05DhdRlzPrdUsl {
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "stc_tbl_05_dhd_rlz_prd_usl_seq")
+  @SequenceGenerator(sequenceName = "stc_tbl_05_dhd_rlz_prd_usl_id_seq", allocationSize = 1, name = "stc_tbl_05_dhd_rlz_prd_usl_seq")
   private int id;
   private String idSubclass;
   private int god;

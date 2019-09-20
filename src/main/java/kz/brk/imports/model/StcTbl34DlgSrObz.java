@@ -10,23 +10,24 @@ import java.util.Date;
 @Setter
 @Table(name = "stc_tbl_34_dlg_sr_obz")
 public class StcTbl34DlgSrObz {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
-  private String idSubclass;
-  private int god;
-  private int fld171DlgObzNchl;
-  private int fld172DlgObzKnc;
-  private int fld173DlgFinObzNchl;
-  private int fld174DlgFinObzKnc;
-  private int fld175DlgBnkZaimNchl;
-  private int fld176DlgBnkZaimKnc;
-  private int fld177DlgKrdZdlNchl;
-  private int fld178DlgKrdZdlKnc;
-  private int fld179PrObzNchl;
-  private int fld180PrObzKnc;
-  @Builder.Default
-  private int relevance = 1;
-  @Builder.Default
-  private Date downloadDate = new Date();
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "stc_tbl_34_dlg_sr_obz_seq")
+    @SequenceGenerator(sequenceName = "stc_tbl_34_dlg_sr_obz_id_seq", allocationSize = 1, name = "stc_tbl_34_dlg_sr_obz_seq")
+    private int id;
+    private String idSubclass;
+    private int god;
+    private int fld171DlgObzNchl;
+    private int fld172DlgObzKnc;
+    private int fld173DlgFinObzNchl;
+    private int fld174DlgFinObzKnc;
+    private int fld175DlgBnkZaimNchl;
+    private int fld176DlgBnkZaimKnc;
+    private int fld177DlgKrdZdlNchl;
+    private int fld178DlgKrdZdlKnc;
+    private int fld179PrObzNchl;
+    private int fld180PrObzKnc;
+    @Builder.Default
+    private int relevance = 1;
+    @Builder.Default
+    private Date downloadDate = new Date();
 }
