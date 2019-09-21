@@ -27,5 +27,7 @@ public class Tbl46 {
         item.setFld251ChstPzcInostrVlt(CheckInt.cellToInt(row.getCell(253)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

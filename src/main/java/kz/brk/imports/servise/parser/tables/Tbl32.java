@@ -32,5 +32,7 @@ public class Tbl32 {
         item.setFld170PrObzKnc(CheckInt.cellToInt(row.getCell(172)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

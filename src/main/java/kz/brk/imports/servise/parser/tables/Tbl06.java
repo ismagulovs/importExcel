@@ -27,5 +27,7 @@ public class Tbl06 {
         item.setFld027DhdVybAkt(CheckInt.cellToInt(row.getCell(29)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

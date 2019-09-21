@@ -27,5 +27,7 @@ public class Tbl10 {
         item.setFld043RashCorpPn(CheckInt.cellToInt(row.getCell(45)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

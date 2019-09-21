@@ -30,5 +30,7 @@ public class Tbl34 {
         item.setFld180PrObzKnc(CheckInt.cellToInt(row.getCell(182)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

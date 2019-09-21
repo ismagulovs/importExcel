@@ -35,5 +35,7 @@ public class Tbl44 {
         item.setFld244PrVbt(CheckInt.cellToInt(row.getCell(246)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

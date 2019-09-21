@@ -32,5 +32,7 @@ public class Tbl28 {
         item.setFld144PrZpsKnc(CheckInt.cellToInt(row.getCell(146)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

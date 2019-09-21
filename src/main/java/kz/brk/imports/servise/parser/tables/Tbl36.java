@@ -36,5 +36,7 @@ public class Tbl36 {
         item.setFld196DolMenshKnc(CheckInt.cellToInt(row.getCell(198)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

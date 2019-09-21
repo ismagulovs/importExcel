@@ -24,5 +24,7 @@ public class Tbl04 {
         item.setFld014PrstUmn(CheckInt.cellToInt(row.getCell(16)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

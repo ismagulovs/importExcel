@@ -42,5 +42,7 @@ public class Tbl22 {
         item.setFld104ZdlOplTrdPrsr(CheckInt.cellToInt(row.getCell(106)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

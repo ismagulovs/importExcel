@@ -34,5 +34,7 @@ public class Tbl26 {
         item.setFld132PrAktvKnc(CheckInt.cellToInt(row.getCell(134)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

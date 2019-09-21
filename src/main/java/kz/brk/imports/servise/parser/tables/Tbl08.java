@@ -29,5 +29,7 @@ public class Tbl08 {
         item.setFld036NeprzvRsh(CheckInt.cellToInt(row.getCell(38)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

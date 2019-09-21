@@ -18,7 +18,10 @@ public class Tbl00 {
         StcTbl00ChislnstRabot item = new StcTbl00ChislnstRabot();
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
+        item.setNameKato(row.getCell(2).getStringCellValue());
+
         em.persist(item);
         em.flush();
+        em.clear();
     }
 }

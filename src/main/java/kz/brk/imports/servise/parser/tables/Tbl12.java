@@ -27,5 +27,7 @@ public class Tbl12 {
         item.setFld050SumUbtk(CheckInt.cellToInt(row.getCell(52)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

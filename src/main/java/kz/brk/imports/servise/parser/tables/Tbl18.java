@@ -36,5 +36,7 @@ public class Tbl18 {
         item.setFld066PrchslObzVzn(CheckInt.cellToInt(row.getCell(68)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

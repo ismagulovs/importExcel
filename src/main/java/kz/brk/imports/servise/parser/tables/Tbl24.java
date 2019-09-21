@@ -34,5 +34,7 @@ public class Tbl24 {
         item.setFld118KptlKnc(CheckInt.cellToInt(row.getCell(120)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

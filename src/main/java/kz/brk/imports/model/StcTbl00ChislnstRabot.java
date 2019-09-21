@@ -17,6 +17,7 @@ public class StcTbl00ChislnstRabot {
     @SequenceGenerator(sequenceName = "stc_tbl_00_chislnst_rabot_id_seq", allocationSize = 1, name = "stc_tbl_00_chislnst_rabot_seq")
     private int id;
     private String idSubclass;
+    private String nameKato;
     private int god;
     @Builder.Default
     private int fld000ChisloRbtnk = 0;

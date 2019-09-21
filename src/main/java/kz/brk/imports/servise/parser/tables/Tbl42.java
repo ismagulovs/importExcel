@@ -37,5 +37,7 @@ public class Tbl42 {
         item.setFld229ChstSumDenSr(CheckInt.cellToInt(row.getCell(231)));
 
         em.persist(item);
+        em.flush();
+        em.clear();
     }
 }

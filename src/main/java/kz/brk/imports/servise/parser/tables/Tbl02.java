@@ -28,5 +28,6 @@ public class Tbl02 {
         item.setFld005RentPrzv(CheckInt.cellToBigDecimal(row.getCell(7)));
         em.persist(item);
         em.flush();
+        em.clear();
     }
 }
