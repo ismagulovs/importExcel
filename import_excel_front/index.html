@@ -1,4 +1,45 @@
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Загрузка в базу</title>
+</head>
+<body style="position: absolute; background-size: cover; -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); background-image: url(./img/01.jpg); width: 100%; height: 100%; background-repeat: no-repeat;
+ ">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+                <img src="./img/logo_kk.png" style="position: relative; margin: 50px;">
+                <h2>Загрузка Excel в базу</h2>
+                <form id="data" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file">Выберите Excel</label>
+                        <input type="file" class="form-control" id="file" name="file" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required>
+                        <small id="emailHelp" class="form-text text-muted">Выберите Excel файл в формате *.xls</small>
+                    </div>
+                    <button class="btn btn-outline-secondary" type="submit" id="submitBtn">Загрузить</button>
+                    <a  class="btn btn-outline-secondary" class="btn btn-outline-secondary" id="downloadBtn">Выгрузить Excel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--html>
 <head>
     <title>Загрузка в базу</title>
     <meta charset="UTF-8" />
@@ -9,9 +50,26 @@
         <input type="file" name="file" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required/>
         <button>ok</button>
     </form>
-</body>
+</body-->
 <script type="text/javascript">
+
     $(document).ready(function(e) {
+
+        $('#downloadBtn').click(function(e){
+            e.preventDefault();
+            alert("download");
+            $.ajax({
+                url: 'http://localhost:8080/brk/api/import/downloadExce',
+                type: 'GET',
+                success: function (data) {
+                    alert(data)
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+        });
+
         $("form#data").submit(function(e) {
             e.preventDefault();
             var formData = new FormData(this);
