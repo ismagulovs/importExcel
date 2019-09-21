@@ -22,6 +22,8 @@ public class Parser {
     @Inject Tbl29 tbl29; @Inject Tbl32 tbl32; @Inject Tbl34 tbl34; @Inject Tbl36 tbl36; @Inject Tbl40 tbl40;
     @Inject Tbl42 tbl42; @Inject Tbl44 tbl44; @Inject Tbl46 tbl46;
 
+    @Inject UpdateRelevance updateRelevance;
+
     public boolean parse(String name) {
 
 //        try {
@@ -123,6 +125,9 @@ public class Parser {
     }
 
     private void parseRow(Sheet sheet){
+
+        updateRelevance.update();
+
         for(Row row: sheet){
             if(row.getRowNum() > 7) {
                 if(row.getCell(1) != null){

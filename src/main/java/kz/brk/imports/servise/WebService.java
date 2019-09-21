@@ -11,6 +11,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
+import java.io.File;
 
 @Path("/")
 @Produces("application/json;charset=UTF-8")
@@ -23,7 +24,7 @@ public class WebService {
     @GET
     @Consumes("application/json;charset=UTF-8")
     @Path("loadExcel")
-    public Response getPotokDateList() {
+    public Response loadExcel() {
         String res;
         try{
             res = parser.parse("C:\\Users\\SultanI\\work\\java\\a-aitkazin-brk_import_excel\\test_excel.xls")?"ok" :"false";
@@ -38,5 +39,18 @@ public class WebService {
     @Path("upload")
     public Response upload(MultipartFormDataInput input) {
         return Response.ok().entity(parser.parseExcel(input.getParts().get(0))).build();
+    }
+
+    private static final String FILE_PATH = "C:\\Users\\SultanI\\work\\java\\a-aitkazin-brk_import_excel\\test_excel.xls";
+
+    @GET
+    @Path("downloadExcel")
+    @Produces("application/vnd.ms-excel")
+    public Response getPotokDateList() {
+        File file = new File(FILE_PATH);
+        Response.ResponseBuilder response = Response.ok((Object) file);
+        response.header("Content-Disposition",
+                "attachment; filename=new-excel-file.xls");
+        return response.build();
     }
 }
