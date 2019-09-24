@@ -72,4 +72,48 @@ public class DownloadExcel {
 
         return true;
     }
+
+    public InputStream download2() throws IOException {
+        InputStream inp = this.getClass().getResourceAsStream("/excel/test_excel.xls");
+        Workbook wb = WorkbookFactory.create(inp);
+        Sheet sheet = wb.getSheetAt(0);
+        int numRow = 7;//sheet.getLastRowNum();
+        int num = 0;
+        List<StcTbl00ChislnstRabot> list_tbl_00 = em.createQuery("select t " +
+                "from StcTbl00ChislnstRabot t where t.relevance=1 ")
+                .getResultList();
+        for ( StcTbl00ChislnstRabot item :list_tbl_00) {
+            Row row = sheet.createRow(++numRow);
+            row.createCell(0).setCellValue(++num);
+            row.createCell(1).setCellValue(item.getIdSubclass());
+            row.createCell(2).setCellValue(item.getNameKato());
+            tblOut02.parseTblOut(row,item.getIdSubclass());
+            tblOut03.parseTblOut(row,item.getIdSubclass());
+            tblOut04.parseTblOut(row,item.getIdSubclass());
+            tblOut05.parseTblOut(row,item.getIdSubclass());
+            tblOut06.parseTblOut(row,item.getIdSubclass());
+            tblOut08.parseTblOut(row,item.getIdSubclass());
+            tblOut10.parseTblOut(row,item.getIdSubclass());
+            tblOut12.parseTblOut(row,item.getIdSubclass());
+            tblOut18.parseTblOut(row,item.getIdSubclass());
+            tblOut20.parseTblOut(row,item.getIdSubclass());
+            tblOut22.parseTblOut(row,item.getIdSubclass());
+            tblOut24.parseTblOut(row,item.getIdSubclass());
+            tblOut26.parseTblOut(row,item.getIdSubclass());
+            tblOut28.parseTblOut(row,item.getIdSubclass());
+            tblOut29.parseTblOut(row,item.getIdSubclass());
+            tblOut32.parseTblOut(row,item.getIdSubclass());
+            tblOut34.parseTblOut(row,item.getIdSubclass());
+            tblOut36.parseTblOut(row,item.getIdSubclass());
+            tblOut40.parseTblOut(row,item.getIdSubclass());
+            tblOut42.parseTblOut(row,item.getIdSubclass());
+            tblOut44.parseTblOut(row,item.getIdSubclass());
+            tblOut46.parseTblOut(row,item.getIdSubclass());
+        }
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        wb.write(bos);
+        byte[] barray = bos.toByteArray();
+        InputStream is = new ByteArrayInputStream(barray);
+        return is;
+    }
 }

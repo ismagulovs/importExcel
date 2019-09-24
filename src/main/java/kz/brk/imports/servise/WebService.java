@@ -1,19 +1,17 @@
 package kz.brk.imports.servise;
-/**
- * Created by ww on 02.03.2016.
- */
 
 import kz.brk.imports.servise.parser.DownloadExcel;
 import kz.brk.imports.servise.parser.Parser;
-import org.apache.james.mime4j.field.datetime.DateTime;
 import org.jboss.resteasy.plugins.providers.multipart.MultipartFormDataInput;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -34,7 +32,7 @@ public class WebService {
     public Response loadExcel() {
         String res;
         try{
-            res = parser.parse(FILE_PATH)?"ok" :"false";
+            res = parser.parse(FILE_PATH)?"ok":"false";
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -48,7 +46,7 @@ public class WebService {
         return Response.ok("Загрузка завершена").entity(parser.parseExcel(input.getParts().get(0))).build();
     }
 
-    private static final String FILE_PATH = "C:\\distr\\my files\\БРК\\projects\\importExcel\\test_excel.xls";
+    private static final String FILE_PATH = "C:\\Users\\SultanI\\work\\java\\excel_test.xls";
 
     @GET
     @Path("downloadExcel")
@@ -64,5 +62,18 @@ public class WebService {
         response.header("Content-Disposition",
                 "attachment; filename=export-download-upload-file_("+ strDate +").xls");
         return response.build();
+    }
+
+    @GET
+    @Path("downloadExcel2")
+    @Produces("application/vnd.ms-excel")
+    public Response downloadExcel2() throws IOException {
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy_hh-mm");
+        String strDate = formatter.format(date);
+       InputStream is = downloadExcel.download2();
+        return Response.ok(is, MediaType.APPLICATION_OCTET_STREAM)
+                .header("Content-Disposition", "attachment; filename=stat"+strDate+".xls")
+                .build();
     }
 }
