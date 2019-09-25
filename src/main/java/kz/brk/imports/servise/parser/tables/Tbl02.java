@@ -21,10 +21,10 @@ public class Tbl02 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
 
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
-        item.setFld001OjmPrzvPrdUsl(CheckInt.cellToInt(row.getCell(3)));
-        item.setFld002DhdRlzcPrdUsl(CheckInt.cellToInt(row.getCell(4)));
-        item.setFld003SbstRzlPrdUsl(CheckInt.cellToInt(row.getCell(5)));
-        item.setFld004PrbNlg(CheckInt.cellToInt(row.getCell(6)));
+        item.setFld001OjmPrzvPrdUsl(CheckInt.cellToBigDecimal(row.getCell(3)));
+        item.setFld002DhdRlzcPrdUsl(CheckInt.cellToBigDecimal(row.getCell(4)));
+        item.setFld003SbstRzlPrdUsl(CheckInt.cellToBigDecimal(row.getCell(5)));
+        item.setFld004PrbNlg(CheckInt.cellToBigDecimal(row.getCell(6)));
         item.setFld005RentPrzv(CheckInt.cellToBigDecimal(row.getCell(7)));
         em.persist(item);
         em.flush();

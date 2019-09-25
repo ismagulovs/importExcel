@@ -2,6 +2,7 @@ package kz.brk.imports.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 @Builder
 @Entity
@@ -17,21 +18,21 @@ public class StcTbl44DvzhDenSrdFinDtlt {
   private int id;
   private String idSubclass;
   private int god;
-  private int fld230PstpDenzhSr;
-  private int fld231EmsAkcCenBmg;
-  private int fld232EmsAkcDrdolInstr;
-  private int fld233EmsOblZaimVeks;
-  private int fld234PlchZaim;
-  private int fld235PstpZaimBank;
-  private int fld236PstpPrZaim;
-  private int fld237PrPstp;
-  private int fld238VbtDenSr;
-  private int fld239PgshZdlgZaim;
-  private int fld240VbtZaimBank;
-  private int fld241VbtPrZaim;
-  private int fld242PrbSbsAkc;
-  private int fld243VpltDvd;
-  private int fld244PrVbt;
+  private BigDecimal fld230PstpDenzhSr;
+  private BigDecimal fld231EmsAkcCenBmg;
+  private BigDecimal fld232EmsAkcDrdolInstr;
+  private BigDecimal fld233EmsOblZaimVeks;
+  private BigDecimal fld234PlchZaim;
+  private BigDecimal fld235PstpZaimBank;
+  private BigDecimal fld236PstpPrZaim;
+  private BigDecimal fld237PrPstp;
+  private BigDecimal fld238VbtDenSr;
+  private BigDecimal fld239PgshZdlgZaim;
+  private BigDecimal fld240VbtZaimBank;
+  private BigDecimal fld241VbtPrZaim;
+  private BigDecimal fld242PrbSbsAkc;
+  private BigDecimal fld243VpltDvd;
+  private BigDecimal fld244PrVbt;
   @Builder.Default
   private int relevance = 1;
   @Builder.Default

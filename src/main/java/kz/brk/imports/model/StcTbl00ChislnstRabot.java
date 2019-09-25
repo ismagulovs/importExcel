@@ -2,6 +2,7 @@ package kz.brk.imports.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Builder
@@ -20,7 +21,7 @@ public class StcTbl00ChislnstRabot {
     private String nameKato;
     private int god;
     @Builder.Default
-    private int fld000ChisloRbtnk = 0;
+    private BigDecimal fld000ChisloRbtnk = BigDecimal.valueOf(0);
     @Builder.Default
     private int relevance = 1;
     @Builder.Default

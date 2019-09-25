@@ -18,12 +18,12 @@ public class Tbl05 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld015DhdRlzc(CheckInt.cellToInt(row.getCell(17)));
-        item.setFld016DhdFin(CheckInt.cellToInt(row.getCell(18)));
-        item.setFld017DvdAkcVzng(CheckInt.cellToInt(row.getCell(19)));
-        item.setFld018PrDhd(CheckInt.cellToInt(row.getCell(20)));
-        item.setFld019DhdKursRznc(CheckInt.cellToInt(row.getCell(21)));
-        item.setFld020DhdVybAkt(CheckInt.cellToInt(row.getCell(22)));
+        item.setFld015DhdRlzc(CheckInt.cellToBigDecimal(row.getCell(17)));
+        item.setFld016DhdFin(CheckInt.cellToBigDecimal(row.getCell(18)));
+        item.setFld017DvdAkcVzng(CheckInt.cellToBigDecimal(row.getCell(19)));
+        item.setFld018PrDhd(CheckInt.cellToBigDecimal(row.getCell(20)));
+        item.setFld019DhdKursRznc(CheckInt.cellToBigDecimal(row.getCell(21)));
+        item.setFld020DhdVybAkt(CheckInt.cellToBigDecimal(row.getCell(22)));
 
         em.persist(item);
         em.flush();

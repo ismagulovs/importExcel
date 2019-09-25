@@ -1,6 +1,7 @@
 package kz.brk.imports.model;
 import lombok.*;
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 @Builder
 @Entity
@@ -16,16 +17,16 @@ public class StcTbl34DlgSrObz {
     private int id;
     private String idSubclass;
     private int god;
-    private int fld171DlgObzNchl;
-    private int fld172DlgObzKnc;
-    private int fld173DlgFinObzNchl;
-    private int fld174DlgFinObzKnc;
-    private int fld175DlgBnkZaimNchl;
-    private int fld176DlgBnkZaimKnc;
-    private int fld177DlgKrdZdlNchl;
-    private int fld178DlgKrdZdlKnc;
-    private int fld179PrObzNchl;
-    private int fld180PrObzKnc;
+    private BigDecimal fld171DlgObzNchl;
+    private BigDecimal fld172DlgObzKnc;
+    private BigDecimal fld173DlgFinObzNchl;
+    private BigDecimal fld174DlgFinObzKnc;
+    private BigDecimal fld175DlgBnkZaimNchl;
+    private BigDecimal fld176DlgBnkZaimKnc;
+    private BigDecimal fld177DlgKrdZdlNchl;
+    private BigDecimal fld178DlgKrdZdlKnc;
+    private BigDecimal fld179PrObzNchl;
+    private BigDecimal fld180PrObzKnc;
     @Builder.Default
     private int relevance = 1;
     @Builder.Default

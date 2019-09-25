@@ -1,6 +1,7 @@
 package kz.brk.imports.model;
 import lombok.*;
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 @Builder
 @Entity
@@ -16,11 +17,11 @@ public class StcTbl04ObmPrdUslOsn {
   private int id;
   private String idSubclass;
   private int god;
-  private int fld010ObjemPrdUsl;
-  private int fld011ObjemRlz;
-  private int fld012PrdUslIsp;
-  private int fld013IzmZps;
-  private int fld014PrstUmn;
+  private BigDecimal fld010ObjemPrdUsl;
+  private BigDecimal fld011ObjemRlz;
+  private BigDecimal fld012PrdUslIsp;
+  private BigDecimal fld013IzmZps;
+  private BigDecimal fld014PrstUmn;
   @Builder.Default
   private int relevance = 1;
   @Builder.Default

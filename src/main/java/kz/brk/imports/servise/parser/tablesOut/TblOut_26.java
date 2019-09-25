@@ -19,20 +19,20 @@ public class TblOut_26 {
                 "from StcTbl26KrtSrAktv t where t.relevance=1 and t.idSubclass = :idSubclass")
                 .setParameter("idSubclass", idSubclass)
                 .getResultList();
-        row.createCell(121).setCellValue(item.get(0).getFld119KrtAktvNchl());
-        row.createCell(122).setCellValue(item.get(0).getFld120KrtAktvKnc());
-        row.createCell(123).setCellValue(item.get(0).getFld121DnzhSrdNchl());
-        row.createCell(124).setCellValue(item.get(0).getFld122DnzhSrdKnc());
-        row.createCell(125).setCellValue(item.get(0).getFld123DnzhKssNchl());
-        row.createCell(126).setCellValue(item.get(0).getFld124DnzhKssKnc());
-        row.createCell(127).setCellValue(item.get(0).getFld125KrtFinInvNchl());
-        row.createCell(128).setCellValue(item.get(0).getFld126KrtFinInvKnc());
-        row.createCell(129).setCellValue(item.get(0).getFld127KrtDbtZdlNchl());
-        row.createCell(130).setCellValue(item.get(0).getFld128KrtDbtZdlKnc());
-        row.createCell(131).setCellValue(item.get(0).getFld129ZpsNchl());
-        row.createCell(132).setCellValue(item.get(0).getFld130ZpsKnc());
-        row.createCell(133).setCellValue(item.get(0).getFld131PrAktvNchl());
-        row.createCell(134).setCellValue(item.get(0).getFld132PrAktvKnc());
+        row.createCell(121).setCellValue(item.get(0).getFld119KrtAktvNchl().toString());
+        row.createCell(122).setCellValue(item.get(0).getFld120KrtAktvKnc().toString());
+        row.createCell(123).setCellValue(item.get(0).getFld121DnzhSrdNchl().toString());
+        row.createCell(124).setCellValue(item.get(0).getFld122DnzhSrdKnc().toString());
+        row.createCell(125).setCellValue(item.get(0).getFld123DnzhKssNchl().toString());
+        row.createCell(126).setCellValue(item.get(0).getFld124DnzhKssKnc().toString());
+        row.createCell(127).setCellValue(item.get(0).getFld125KrtFinInvNchl().toString());
+        row.createCell(128).setCellValue(item.get(0).getFld126KrtFinInvKnc().toString());
+        row.createCell(129).setCellValue(item.get(0).getFld127KrtDbtZdlNchl().toString());
+        row.createCell(130).setCellValue(item.get(0).getFld128KrtDbtZdlKnc().toString());
+        row.createCell(131).setCellValue(item.get(0).getFld129ZpsNchl().toString());
+        row.createCell(132).setCellValue(item.get(0).getFld130ZpsKnc().toString());
+        row.createCell(133).setCellValue(item.get(0).getFld131PrAktvNchl().toString());
+        row.createCell(134).setCellValue(item.get(0).getFld132PrAktvKnc().toString());
 
         item.clear();
         em.clear();

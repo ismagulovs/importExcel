@@ -18,18 +18,18 @@ public class Tbl32 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld159KrtObzNchl(CheckInt.cellToInt(row.getCell(161)));
-        item.setFld160KrtObzKnc(CheckInt.cellToInt(row.getCell(162)));
-        item.setFld161KrtFinObzNchl(CheckInt.cellToInt(row.getCell(163)));
-        item.setFld162KrtFinObzKnc(CheckInt.cellToInt(row.getCell(164)));
-        item.setFld163KrtBnkZaimNchl(CheckInt.cellToInt(row.getCell(165)));
-        item.setFld164KrtBnkZaimKnc(CheckInt.cellToInt(row.getCell(166)));
-        item.setFld165ObzNlgNchl(CheckInt.cellToInt(row.getCell(167)));
-        item.setFld166ObzNlgKnc(CheckInt.cellToInt(row.getCell(168)));
-        item.setFld167KrtKrdZdlNchl(CheckInt.cellToInt(row.getCell(169)));
-        item.setFld168KrtKrdZdlKnc(CheckInt.cellToInt(row.getCell(170)));
-        item.setFld169PrObzNchl(CheckInt.cellToInt(row.getCell(171)));
-        item.setFld170PrObzKnc(CheckInt.cellToInt(row.getCell(172)));
+        item.setFld159KrtObzNchl(CheckInt.cellToBigDecimal(row.getCell(161)));
+        item.setFld160KrtObzKnc(CheckInt.cellToBigDecimal(row.getCell(162)));
+        item.setFld161KrtFinObzNchl(CheckInt.cellToBigDecimal(row.getCell(163)));
+        item.setFld162KrtFinObzKnc(CheckInt.cellToBigDecimal(row.getCell(164)));
+        item.setFld163KrtBnkZaimNchl(CheckInt.cellToBigDecimal(row.getCell(165)));
+        item.setFld164KrtBnkZaimKnc(CheckInt.cellToBigDecimal(row.getCell(166)));
+        item.setFld165ObzNlgNchl(CheckInt.cellToBigDecimal(row.getCell(167)));
+        item.setFld166ObzNlgKnc(CheckInt.cellToBigDecimal(row.getCell(168)));
+        item.setFld167KrtKrdZdlNchl(CheckInt.cellToBigDecimal(row.getCell(169)));
+        item.setFld168KrtKrdZdlKnc(CheckInt.cellToBigDecimal(row.getCell(170)));
+        item.setFld169PrObzNchl(CheckInt.cellToBigDecimal(row.getCell(171)));
+        item.setFld170PrObzKnc(CheckInt.cellToBigDecimal(row.getCell(172)));
 
         em.persist(item);
         em.flush();

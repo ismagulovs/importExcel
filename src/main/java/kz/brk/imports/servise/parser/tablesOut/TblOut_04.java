@@ -19,11 +19,11 @@ public class TblOut_04 {
                 "from StcTbl04ObmPrdUslOsn t where t.relevance=1 and t.idSubclass = :idSubclass")
                 .setParameter("idSubclass", idSubclass)
                 .getResultList();
-        row.createCell(12).setCellValue(item.get(0).getFld010ObjemPrdUsl());
-        row.createCell(13).setCellValue(item.get(0).getFld011ObjemRlz());
-        row.createCell(14).setCellValue(item.get(0).getFld012PrdUslIsp());
-        row.createCell(15).setCellValue(item.get(0).getFld013IzmZps());
-        row.createCell(16).setCellValue(item.get(0).getFld014PrstUmn());
+        row.createCell(12).setCellValue(item.get(0).getFld010ObjemPrdUsl().toString());
+        row.createCell(13).setCellValue(item.get(0).getFld011ObjemRlz().toString());
+        row.createCell(14).setCellValue(item.get(0).getFld012PrdUslIsp().toString());
+        row.createCell(15).setCellValue(item.get(0).getFld013IzmZps().toString());
+        row.createCell(16).setCellValue(item.get(0).getFld014PrstUmn().toString());
         item.clear();
         em.clear();
     }

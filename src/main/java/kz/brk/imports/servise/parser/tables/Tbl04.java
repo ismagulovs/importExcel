@@ -17,11 +17,11 @@ public class Tbl04 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld010ObjemPrdUsl(CheckInt.cellToInt(row.getCell(12)));
-        item.setFld011ObjemRlz(CheckInt.cellToInt(row.getCell(13)));
-        item.setFld012PrdUslIsp(CheckInt.cellToInt(row.getCell(14)));
-        item.setFld013IzmZps(CheckInt.cellToInt(row.getCell(15)));
-        item.setFld014PrstUmn(CheckInt.cellToInt(row.getCell(16)));
+        item.setFld010ObjemPrdUsl(CheckInt.cellToBigDecimal(row.getCell(12)));
+        item.setFld011ObjemRlz(CheckInt.cellToBigDecimal(row.getCell(13)));
+        item.setFld012PrdUslIsp(CheckInt.cellToBigDecimal(row.getCell(14)));
+        item.setFld013IzmZps(CheckInt.cellToBigDecimal(row.getCell(15)));
+        item.setFld014PrstUmn(CheckInt.cellToBigDecimal(row.getCell(16)));
 
         em.persist(item);
         em.flush();

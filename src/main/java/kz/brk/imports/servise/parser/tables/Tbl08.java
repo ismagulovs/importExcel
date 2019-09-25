@@ -18,15 +18,15 @@ public class Tbl08 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld028Vsego(CheckInt.cellToInt(row.getCell(30)));
-        item.setFld029PrzvRhd(CheckInt.cellToInt(row.getCell(31)));
-        item.setFld030MatZatr(CheckInt.cellToInt(row.getCell(32)));
-        item.setFld031AmrtOsnSr(CheckInt.cellToInt(row.getCell(33)));
-        item.setFld032AmrtNemat(CheckInt.cellToInt(row.getCell(34)));
-        item.setFld033FondZpr(CheckInt.cellToInt(row.getCell(35)));
-        item.setFld034DenPsbRab(CheckInt.cellToInt(row.getCell(36)));
-        item.setFld035PrZtr(CheckInt.cellToInt(row.getCell(37)));
-        item.setFld036NeprzvRsh(CheckInt.cellToInt(row.getCell(38)));
+        item.setFld028Vsego(CheckInt.cellToBigDecimal(row.getCell(30)));
+        item.setFld029PrzvRhd(CheckInt.cellToBigDecimal(row.getCell(31)));
+        item.setFld030MatZatr(CheckInt.cellToBigDecimal(row.getCell(32)));
+        item.setFld031AmrtOsnSr(CheckInt.cellToBigDecimal(row.getCell(33)));
+        item.setFld032AmrtNemat(CheckInt.cellToBigDecimal(row.getCell(34)));
+        item.setFld033FondZpr(CheckInt.cellToBigDecimal(row.getCell(35)));
+        item.setFld034DenPsbRab(CheckInt.cellToBigDecimal(row.getCell(36)));
+        item.setFld035PrZtr(CheckInt.cellToBigDecimal(row.getCell(37)));
+        item.setFld036NeprzvRsh(CheckInt.cellToBigDecimal(row.getCell(38)));
 
         em.persist(item);
         em.flush();

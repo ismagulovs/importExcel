@@ -1,6 +1,7 @@
 package kz.brk.imports.model;
 import lombok.*;
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 @Builder
 @Entity
@@ -16,22 +17,22 @@ public class StcTbl40DvzhDenSrdOperDtlt {
   private int id;
   private String idSubclass;
   private int god;
-  private int fld197PstpDenzhSr;
-  private int fld198RlzcTvr;
-  private int fld199PrdsUsl;
-  private int fld200Dvdnt;
-  private int fld201PstpVoznArend;
-  private int fld202PstpStrahPrm;
-  private int fld203PrPstp;
-  private int fld204VbtDenSrds;
-  private int fld205PltPostTvrUsl;
-  private int fld206VplVoznZaim;
-  private int fld207ZaimBank;
-  private int fld208PrZaim;
-  private int fld209PltVoznArend;
-  private int fld210PltStrahPrm;
-  private int fld211PrVbt;
-  private int fld212ChstSumDenSr;
+  private BigDecimal fld197PstpDenzhSr;
+  private BigDecimal fld198RlzcTvr;
+  private BigDecimal fld199PrdsUsl;
+  private BigDecimal fld200Dvdnt;
+  private BigDecimal fld201PstpVoznArend;
+  private BigDecimal fld202PstpStrahPrm;
+  private BigDecimal fld203PrPstp;
+  private BigDecimal fld204VbtDenSrds;
+  private BigDecimal fld205PltPostTvrUsl;
+  private BigDecimal fld206VplVoznZaim;
+  private BigDecimal fld207ZaimBank;
+  private BigDecimal fld208PrZaim;
+  private BigDecimal fld209PltVoznArend;
+  private BigDecimal fld210PltStrahPrm;
+  private BigDecimal fld211PrVbt;
+  private BigDecimal fld212ChstSumDenSr;
   @Builder.Default
   private int relevance = 1;
   @Builder.Default

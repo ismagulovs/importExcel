@@ -18,22 +18,22 @@ public class TblOut_40 {
                 "from StcTbl40DvzhDenSrdOperDtlt t where t.relevance=1 and t.idSubclass = :idSubclass")
                 .setParameter("idSubclass", idSubclass)
                 .getResultList();
-        row.createCell(199).setCellValue(item.get(0).getFld197PstpDenzhSr());
-        row.createCell(200).setCellValue(item.get(0).getFld198RlzcTvr());
-        row.createCell(201).setCellValue(item.get(0).getFld199PrdsUsl());
-        row.createCell(202).setCellValue(item.get(0).getFld200Dvdnt());
-        row.createCell(203).setCellValue(item.get(0).getFld201PstpVoznArend());
-        row.createCell(204).setCellValue(item.get(0).getFld202PstpStrahPrm());
-        row.createCell(205).setCellValue(item.get(0).getFld203PrPstp());
-        row.createCell(206).setCellValue(item.get(0).getFld204VbtDenSrds());
-        row.createCell(207).setCellValue(item.get(0).getFld205PltPostTvrUsl());
-        row.createCell(208).setCellValue(item.get(0).getFld206VplVoznZaim());
-        row.createCell(209).setCellValue(item.get(0).getFld207ZaimBank());
-        row.createCell(210).setCellValue(item.get(0).getFld208PrZaim());
-        row.createCell(211).setCellValue(item.get(0).getFld209PltVoznArend());
-        row.createCell(212).setCellValue(item.get(0).getFld210PltStrahPrm());
-        row.createCell(213).setCellValue(item.get(0).getFld211PrVbt());
-        row.createCell(214).setCellValue(item.get(0).getFld212ChstSumDenSr());
+        row.createCell(199).setCellValue(item.get(0).getFld197PstpDenzhSr().toString());
+        row.createCell(200).setCellValue(item.get(0).getFld198RlzcTvr().toString());
+        row.createCell(201).setCellValue(item.get(0).getFld199PrdsUsl().toString());
+        row.createCell(202).setCellValue(item.get(0).getFld200Dvdnt().toString());
+        row.createCell(203).setCellValue(item.get(0).getFld201PstpVoznArend().toString());
+        row.createCell(204).setCellValue(item.get(0).getFld202PstpStrahPrm().toString());
+        row.createCell(205).setCellValue(item.get(0).getFld203PrPstp().toString());
+        row.createCell(206).setCellValue(item.get(0).getFld204VbtDenSrds().toString());
+        row.createCell(207).setCellValue(item.get(0).getFld205PltPostTvrUsl().toString());
+        row.createCell(208).setCellValue(item.get(0).getFld206VplVoznZaim().toString());
+        row.createCell(209).setCellValue(item.get(0).getFld207ZaimBank().toString());
+        row.createCell(210).setCellValue(item.get(0).getFld208PrZaim().toString());
+        row.createCell(211).setCellValue(item.get(0).getFld209PltVoznArend().toString());
+        row.createCell(212).setCellValue(item.get(0).getFld210PltStrahPrm().toString());
+        row.createCell(213).setCellValue(item.get(0).getFld211PrVbt().toString());
+        row.createCell(214).setCellValue(item.get(0).getFld212ChstSumDenSr().toString());
 
         item.clear();
         em.clear();

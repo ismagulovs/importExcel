@@ -1,6 +1,7 @@
 package kz.brk.imports.model;
 import lombok.*;
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 @Builder
 @Entity
@@ -16,18 +17,18 @@ public class StcTbl28Zapasy {
   private int id;
   private String idSubclass;
   private int god;
-  private int fld133ZpsNchl;
-  private int fld134ZpsKnc;
-  private int fld135SrMtrlNchl;
-  private int fld136SrMtrlKnc;
-  private int fld137GtvPrdNchl;
-  private int fld138GtvPrdKnc;
-  private int fld139TvrNchl;
-  private int fld140TvrKnc;
-  private int fld141NzvrPrzvNchl;
-  private int fld142NzvrPrzvKnc;
-  private int fld143PrZpsNchl;
-  private int fld144PrZpsKnc;
+  private BigDecimal fld133ZpsNchl;
+  private BigDecimal fld134ZpsKnc;
+  private BigDecimal fld135SrMtrlNchl;
+  private BigDecimal fld136SrMtrlKnc;
+  private BigDecimal fld137GtvPrdNchl;
+  private BigDecimal fld138GtvPrdKnc;
+  private BigDecimal fld139TvrNchl;
+  private BigDecimal fld140TvrKnc;
+  private BigDecimal fld141NzvrPrzvNchl;
+  private BigDecimal fld142NzvrPrzvKnc;
+  private BigDecimal fld143PrZpsNchl;
+  private BigDecimal fld144PrZpsKnc;
   @Builder.Default
   private int relevance = 1;
   @Builder.Default

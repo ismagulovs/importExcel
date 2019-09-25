@@ -2,6 +2,7 @@ package kz.brk.imports.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 @Builder
 @Entity
@@ -17,22 +18,22 @@ public class StcTbl18NachNlgDrPlat {
   private int id;
   private String idSubclass;
   private int god;
-  private int fld051Vsego;
-  private int fld052CorpPdhNlg;
-  private int fld053IndPdhNlg;
-  private int fld054SocNlg;
-  private int fld055OtchSocStrh;
-  private int fld056ZemNlg;
-  private int fld057NlgImsh;
-  private int fld058NlgTs;
-  private int fld059NlgDobStm;
-  private int fld060Akcz;
-  private int fld061NlgSpecPlat;
-  private int fld062NlgSvrhPrb;
-  private int fld063PrSpecPlt;
-  private int fld064DrObzPlat;
-  private int fld065TmzhPlat;
-  private int fld066PrchslObzVzn;
+  private BigDecimal fld051Vsego;
+  private BigDecimal fld052CorpPdhNlg;
+  private BigDecimal fld053IndPdhNlg;
+  private BigDecimal fld054SocNlg;
+  private BigDecimal fld055OtchSocStrh;
+  private BigDecimal fld056ZemNlg;
+  private BigDecimal fld057NlgImsh;
+  private BigDecimal fld058NlgTs;
+  private BigDecimal fld059NlgDobStm;
+  private BigDecimal fld060Akcz;
+  private BigDecimal fld061NlgSpecPlat;
+  private BigDecimal fld062NlgSvrhPrb;
+  private BigDecimal fld063PrSpecPlt;
+  private BigDecimal fld064DrObzPlat;
+  private BigDecimal fld065TmzhPlat;
+  private BigDecimal fld066PrchslObzVzn;
   @Builder.Default
   private int relevance = 1;
   @Builder.Default

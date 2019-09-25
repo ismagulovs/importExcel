@@ -18,10 +18,10 @@ public class TblOut_03 {
                 "from StcTbl03ObshObmPrdUsl t where t.relevance=1 and t.idSubclass = :idSubclass")
                 .setParameter("idSubclass", idSubclass)
                 .getResultList();
-        row.createCell(8).setCellValue(item.get(0).getFld006ObjemRlz());
-        row.createCell(9).setCellValue(item.get(0).getFld007PrdUslIsp());
-        row.createCell(10).setCellValue(item.get(0).getFld008IzmZps());
-        row.createCell(11).setCellValue(item.get(0).getFld009PrstUmn());
+        row.createCell(8).setCellValue(item.get(0).getFld006ObjemRlz().toString());
+        row.createCell(9).setCellValue(item.get(0).getFld007PrdUslIsp().toString());
+        row.createCell(10).setCellValue(item.get(0).getFld008IzmZps().toString());
+        row.createCell(11).setCellValue(item.get(0).getFld009PrstUmn().toString());
 
         item.clear();
         em.clear();

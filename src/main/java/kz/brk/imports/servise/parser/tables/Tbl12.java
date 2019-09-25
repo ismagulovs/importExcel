@@ -18,13 +18,13 @@ public class Tbl12 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld044ObshKolPrdp(CheckInt.cellToInt(row.getCell(46)));
-        item.setFld045KolPrdpPrb(CheckInt.cellToInt(row.getCell(47)));
+        item.setFld044ObshKolPrdp(CheckInt.cellToBigDecimal(row.getCell(46)));
+        item.setFld045KolPrdpPrb(CheckInt.cellToBigDecimal(row.getCell(47)));
         item.setFld046PrcnObshKolPrb(CheckInt.cellToBigDecimal(row.getCell(48)));
-        item.setFld047SumPrb(CheckInt.cellToInt(row.getCell(49)));
-        item.setFld048KolPrdpUbtk(CheckInt.cellToInt(row.getCell(50)));
+        item.setFld047SumPrb(CheckInt.cellToBigDecimal(row.getCell(49)));
+        item.setFld048KolPrdpUbtk(CheckInt.cellToBigDecimal(row.getCell(50)));
         item.setFld049PrcnObshKolUbtk(CheckInt.cellToBigDecimal(row.getCell(51)));
-        item.setFld050SumUbtk(CheckInt.cellToInt(row.getCell(52)));
+        item.setFld050SumUbtk(CheckInt.cellToBigDecimal(row.getCell(52)));
 
         em.persist(item);
         em.flush();

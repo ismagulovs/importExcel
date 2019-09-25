@@ -1,5 +1,7 @@
 package kz.brk.imports.model;
 import lombok.*;
+
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 import java.util.Date;
@@ -17,28 +19,28 @@ public class StcTbl22SostVzmRschPrdp {
   private int id;
   private String idSubclass;
   private int god;
-  private int fld083DbtZdlVse;
-  private int fld084DbtZdlPrsr;
-  private int fld085ZdlPkpZkzVse;
-  private int fld086ZdlPkpZkzPrsr;
-  private int fld087PrDbtZdlVse;
-  private int fld088PrDbtZdlPrsr;
-  private int fld089ZdlObzVse;
-  private int fld090ZdlObzPrsr;
-  private int fld091RschPstPdrVse;
-  private int fld092RschPstPdrPrsr;
-  private int fld093NlgDrObzPlatVse;
-  private int fld094NlgDrObzPlatPrsr;
-  private int fld095PrchObzPensVznVse;
-  private int fld096PrchObzPensVznPrsr;
-  private int fld097ZaimBankVse;
-  private int fld098ZaimBankPrsr;
-  private int fld099PrZaimVse;
-  private int fld100PrZaimPrsr;
-  private int fld101PrKrdZdlVse;
-  private int fld102PrKrdZdlPrsr;
-  private int fld103ZdlOplTrdVse;
-  private int fld104ZdlOplTrdPrsr;
+  private BigDecimal fld083DbtZdlVse;
+  private BigDecimal fld084DbtZdlPrsr;
+  private BigDecimal fld085ZdlPkpZkzVse;
+  private BigDecimal fld086ZdlPkpZkzPrsr;
+  private BigDecimal fld087PrDbtZdlVse;
+  private BigDecimal fld088PrDbtZdlPrsr;
+  private BigDecimal fld089ZdlObzVse;
+  private BigDecimal fld090ZdlObzPrsr;
+  private BigDecimal fld091RschPstPdrVse;
+  private BigDecimal fld092RschPstPdrPrsr;
+  private BigDecimal fld093NlgDrObzPlatVse;
+  private BigDecimal fld094NlgDrObzPlatPrsr;
+  private BigDecimal fld095PrchObzPensVznVse;
+  private BigDecimal fld096PrchObzPensVznPrsr;
+  private BigDecimal fld097ZaimBankVse;
+  private BigDecimal fld098ZaimBankPrsr;
+  private BigDecimal fld099PrZaimVse;
+  private BigDecimal fld100PrZaimPrsr;
+  private BigDecimal fld101PrKrdZdlVse;
+  private BigDecimal fld102PrKrdZdlPrsr;
+  private BigDecimal fld103ZdlOplTrdVse;
+  private BigDecimal fld104ZdlOplTrdPrsr;
   @Builder.Default
   private int relevance = 1;
   @Builder.Default

@@ -1,6 +1,7 @@
 package kz.brk.imports.model;
 import lombok.*;
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 @Builder
 @Entity
@@ -16,20 +17,20 @@ public class StcTbl24BalancePrdp {
   private int id;
   private String idSubclass;
   private int god;
-  private int fld105BlsAktvNchl;
-  private int fld106BlsAktvKnc;
-  private int fld107KrtAktvNchl;
-  private int fld108KrtAktvKnc;
-  private int fld109DlgAktvNchl;
-  private int fld110DlgAktvKnc;
-  private int fld111BlsObzNchl;
-  private int fld112BlsObzKnc;
-  private int fld113KrtObzNchl;
-  private int fld114KrtObzKnc;
-  private int fld115DlgObzNchl;
-  private int fld116DlgObzKnc;
-  private int fld117KptlNchl;
-  private int fld118KptlKnc;
+  private BigDecimal fld105BlsAktvNchl;
+  private BigDecimal fld106BlsAktvKnc;
+  private BigDecimal fld107KrtAktvNchl;
+  private BigDecimal fld108KrtAktvKnc;
+  private BigDecimal fld109DlgAktvNchl;
+  private BigDecimal fld110DlgAktvKnc;
+  private BigDecimal fld111BlsObzNchl;
+  private BigDecimal fld112BlsObzKnc;
+  private BigDecimal fld113KrtObzNchl;
+  private BigDecimal fld114KrtObzKnc;
+  private BigDecimal fld115DlgObzNchl;
+  private BigDecimal fld116DlgObzKnc;
+  private BigDecimal fld117KptlNchl;
+  private BigDecimal fld118KptlKnc;
   @Builder.Default
   private int relevance = 1;
   @Builder.Default

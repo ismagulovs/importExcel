@@ -22,10 +22,10 @@ public class StcTbl02OsnPkzFinHozDtlst {
     private int id;
     private String idSubclass;
     private int god;
-    private int fld001OjmPrzvPrdUsl;
-    private int fld002DhdRlzcPrdUsl;
-    private int fld003SbstRzlPrdUsl;
-    private int fld004PrbNlg;
+    private BigDecimal fld001OjmPrzvPrdUsl;
+    private BigDecimal fld002DhdRlzcPrdUsl;
+    private BigDecimal fld003SbstRzlPrdUsl;
+    private BigDecimal fld004PrbNlg;
     private BigDecimal fld005RentPrzv;
     @Builder.Default
     private int relevance = 1;

@@ -1,6 +1,7 @@
 package kz.brk.imports.model;
 import lombok.*;
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 @Builder
 @Entity
@@ -16,22 +17,22 @@ public class StcTbl36Capital {
   private int id;
   private String idSubclass;
   private int god;
-  private int fld181CptlNchl;
-  private int fld182CptlKnc;
-  private int fld183UstvCptlNchl;
-  private int fld184UstvCptlKnc;
-  private int fld185NeoplCptlNchl;
-  private int fld186NeoplCptlKnc;
-  private int fld187VykupSbsDolInstrNchl;
-  private int fld188VykupSbsDolInstrKnc;
-  private int fld189EmissDhdNchl;
-  private int fld190EmissDhdKnc;
-  private int fld191RzvrNchl;
-  private int fld192RzvrKnc;
-  private int fld193NerasprPrbNchl;
-  private int fld194NerasprPrbKnc;
-  private int fld195DolMenshNchl;
-  private int fld196DolMenshKnc;
+  private BigDecimal fld181CptlNchl;
+  private BigDecimal fld182CptlKnc;
+  private BigDecimal fld183UstvCptlNchl;
+  private BigDecimal fld184UstvCptlKnc;
+  private BigDecimal fld185NeoplCptlNchl;
+  private BigDecimal fld186NeoplCptlKnc;
+  private BigDecimal fld187VykupSbsDolInstrNchl;
+  private BigDecimal fld188VykupSbsDolInstrKnc;
+  private BigDecimal fld189EmissDhdNchl;
+  private BigDecimal fld190EmissDhdKnc;
+  private BigDecimal fld191RzvrNchl;
+  private BigDecimal fld192RzvrKnc;
+  private BigDecimal fld193NerasprPrbNchl;
+  private BigDecimal fld194NerasprPrbKnc;
+  private BigDecimal fld195DolMenshNchl;
+  private BigDecimal fld196DolMenshKnc;
   @Builder.Default
   private int relevance = 1;
   @Builder.Default

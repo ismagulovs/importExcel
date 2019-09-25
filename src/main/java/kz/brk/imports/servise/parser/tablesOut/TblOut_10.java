@@ -18,13 +18,13 @@ public class TblOut_10 {
                 "from StcTbl10RezFinHozDtlPrdp t where t.relevance=1 and t.idSubclass = :idSubclass")
                 .setParameter("idSubclass", idSubclass)
                 .getResultList();
-        row.createCell(39).setCellValue(item.get(0).getFld037ValPrb());
-        row.createCell(40).setCellValue(item.get(0).getFld038RashRlzcPu());
-        row.createCell(41).setCellValue(item.get(0).getFld039AdmRash());
-        row.createCell(42).setCellValue(item.get(0).getFld040RashFin());
-        row.createCell(43).setCellValue(item.get(0).getFld041PrRash());
-        row.createCell(44).setCellValue(item.get(0).getFld042PrblUbtk());
-        row.createCell(45).setCellValue(item.get(0).getFld043RashCorpPn());
+        row.createCell(39).setCellValue(item.get(0).getFld037ValPrb().toString());
+        row.createCell(40).setCellValue(item.get(0).getFld038RashRlzcPu().toString());
+        row.createCell(41).setCellValue(item.get(0).getFld039AdmRash().toString());
+        row.createCell(42).setCellValue(item.get(0).getFld040RashFin().toString());
+        row.createCell(43).setCellValue(item.get(0).getFld041PrRash().toString());
+        row.createCell(44).setCellValue(item.get(0).getFld042PrblUbtk().toString());
+        row.createCell(45).setCellValue(item.get(0).getFld043RashCorpPn().toString());
         item.clear();
         em.clear();
     }

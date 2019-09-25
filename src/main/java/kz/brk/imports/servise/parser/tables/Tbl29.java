@@ -18,20 +18,20 @@ public class Tbl29 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld145DlgAktvNchl(CheckInt.cellToInt(row.getCell(147)));
-        item.setFld146DlgAktvKnc(CheckInt.cellToInt(row.getCell(148)));
-        item.setFld147DlgFinInvNchl(CheckInt.cellToInt(row.getCell(149)));
-        item.setFld148DlgFinInvKnc(CheckInt.cellToInt(row.getCell(150)));
-        item.setFld149DlgDbtZdlNchl(CheckInt.cellToInt(row.getCell(151)));
-        item.setFld150DlgDbtZdlKnc(CheckInt.cellToInt(row.getCell(152)));
-        item.setFld151OsnSrdNchl(CheckInt.cellToInt(row.getCell(153)));
-        item.setFld152OsnSrdKnc(CheckInt.cellToInt(row.getCell(154)));
-        item.setFld153BioAktNchl(CheckInt.cellToInt(row.getCell(155)));
-        item.setFld154BioAktKnc(CheckInt.cellToInt(row.getCell(156)));
-        item.setFld155NematAktNchl(CheckInt.cellToInt(row.getCell(157)));
-        item.setFld156NematAktKnc(CheckInt.cellToInt(row.getCell(158)));
-        item.setFld157PrAktvNchl(CheckInt.cellToInt(row.getCell(159)));
-        item.setFld158PrAktvKnc(CheckInt.cellToInt(row.getCell(160)));
+        item.setFld145DlgAktvNchl(CheckInt.cellToBigDecimal(row.getCell(147)));
+        item.setFld146DlgAktvKnc(CheckInt.cellToBigDecimal(row.getCell(148)));
+        item.setFld147DlgFinInvNchl(CheckInt.cellToBigDecimal(row.getCell(149)));
+        item.setFld148DlgFinInvKnc(CheckInt.cellToBigDecimal(row.getCell(150)));
+        item.setFld149DlgDbtZdlNchl(CheckInt.cellToBigDecimal(row.getCell(151)));
+        item.setFld150DlgDbtZdlKnc(CheckInt.cellToBigDecimal(row.getCell(152)));
+        item.setFld151OsnSrdNchl(CheckInt.cellToBigDecimal(row.getCell(153)));
+        item.setFld152OsnSrdKnc(CheckInt.cellToBigDecimal(row.getCell(154)));
+        item.setFld153BioAktNchl(CheckInt.cellToBigDecimal(row.getCell(155)));
+        item.setFld154BioAktKnc(CheckInt.cellToBigDecimal(row.getCell(156)));
+        item.setFld155NematAktNchl(CheckInt.cellToBigDecimal(row.getCell(157)));
+        item.setFld156NematAktKnc(CheckInt.cellToBigDecimal(row.getCell(158)));
+        item.setFld157PrAktvNchl(CheckInt.cellToBigDecimal(row.getCell(159)));
+        item.setFld158PrAktvKnc(CheckInt.cellToBigDecimal(row.getCell(160)));
 
         em.persist(item);
         em.flush();

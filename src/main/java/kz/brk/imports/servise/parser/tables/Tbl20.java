@@ -18,22 +18,22 @@ public class Tbl20 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld067Vse(CheckInt.cellToInt(row.getCell(69)));
-        item.setFld068CorpPdhNlg(CheckInt.cellToInt(row.getCell(70)));
-        item.setFld069IndPdhNlg(CheckInt.cellToInt(row.getCell(71)));
-        item.setFld070SocNlg(CheckInt.cellToInt(row.getCell(72)));
-        item.setFld071OtchSocStrh(CheckInt.cellToInt(row.getCell(73)));
-        item.setFld072ZemNlg(CheckInt.cellToInt(row.getCell(74)));
-        item.setFld073NlgImsh(CheckInt.cellToInt(row.getCell(75)));
-        item.setFld074NlgTs(CheckInt.cellToInt(row.getCell(76)));
-        item.setFld075NlgDobStm(CheckInt.cellToInt(row.getCell(77)));
-        item.setFld076Akcz(CheckInt.cellToInt(row.getCell(78)));
-        item.setFld077NlgSpecPlat(CheckInt.cellToInt(row.getCell(79)));
-        item.setFld078NlgSvrhPrb(CheckInt.cellToInt(row.getCell(80)));
-        item.setFld079PrSpecPlt(CheckInt.cellToInt(row.getCell(81)));
-        item.setFld080DrObzPlat(CheckInt.cellToInt(row.getCell(82)));
-        item.setFld081TmzhPlat(CheckInt.cellToInt(row.getCell(83)));
-        item.setFld082PrchslObzVzn(CheckInt.cellToInt(row.getCell(84)));
+        item.setFld067Vse(CheckInt.cellToBigDecimal(row.getCell(69)));
+        item.setFld068CorpPdhNlg(CheckInt.cellToBigDecimal(row.getCell(70)));
+        item.setFld069IndPdhNlg(CheckInt.cellToBigDecimal(row.getCell(71)));
+        item.setFld070SocNlg(CheckInt.cellToBigDecimal(row.getCell(72)));
+        item.setFld071OtchSocStrh(CheckInt.cellToBigDecimal(row.getCell(73)));
+        item.setFld072ZemNlg(CheckInt.cellToBigDecimal(row.getCell(74)));
+        item.setFld073NlgImsh(CheckInt.cellToBigDecimal(row.getCell(75)));
+        item.setFld074NlgTs(CheckInt.cellToBigDecimal(row.getCell(76)));
+        item.setFld075NlgDobStm(CheckInt.cellToBigDecimal(row.getCell(77)));
+        item.setFld076Akcz(CheckInt.cellToBigDecimal(row.getCell(78)));
+        item.setFld077NlgSpecPlat(CheckInt.cellToBigDecimal(row.getCell(79)));
+        item.setFld078NlgSvrhPrb(CheckInt.cellToBigDecimal(row.getCell(80)));
+        item.setFld079PrSpecPlt(CheckInt.cellToBigDecimal(row.getCell(81)));
+        item.setFld080DrObzPlat(CheckInt.cellToBigDecimal(row.getCell(82)));
+        item.setFld081TmzhPlat(CheckInt.cellToBigDecimal(row.getCell(83)));
+        item.setFld082PrchslObzVzn(CheckInt.cellToBigDecimal(row.getCell(84)));
 
         em.persist(item);
         em.flush();

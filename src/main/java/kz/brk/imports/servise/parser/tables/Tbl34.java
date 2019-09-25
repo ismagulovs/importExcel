@@ -18,16 +18,16 @@ public class Tbl34 {
         item.setGod(Calendar.getInstance().get(Calendar.YEAR));
         item.setIdSubclass(CheckInt.isNumeric(row.getCell(1).getStringCellValue())?row.getCell(1).getStringCellValue():"0");
 
-        item.setFld171DlgObzNchl(CheckInt.cellToInt(row.getCell(173)));
-        item.setFld172DlgObzKnc(CheckInt.cellToInt(row.getCell(174)));
-        item.setFld173DlgFinObzNchl(CheckInt.cellToInt(row.getCell(175)));
-        item.setFld174DlgFinObzKnc(CheckInt.cellToInt(row.getCell(176)));
-        item.setFld175DlgBnkZaimNchl(CheckInt.cellToInt(row.getCell(177)));
-        item.setFld176DlgBnkZaimKnc(CheckInt.cellToInt(row.getCell(178)));
-        item.setFld177DlgKrdZdlNchl(CheckInt.cellToInt(row.getCell(179)));
-        item.setFld178DlgKrdZdlKnc(CheckInt.cellToInt(row.getCell(180)));
-        item.setFld179PrObzNchl(CheckInt.cellToInt(row.getCell(181)));
-        item.setFld180PrObzKnc(CheckInt.cellToInt(row.getCell(182)));
+        item.setFld171DlgObzNchl(CheckInt.cellToBigDecimal(row.getCell(173)));
+        item.setFld172DlgObzKnc(CheckInt.cellToBigDecimal(row.getCell(174)));
+        item.setFld173DlgFinObzNchl(CheckInt.cellToBigDecimal(row.getCell(175)));
+        item.setFld174DlgFinObzKnc(CheckInt.cellToBigDecimal(row.getCell(176)));
+        item.setFld175DlgBnkZaimNchl(CheckInt.cellToBigDecimal(row.getCell(177)));
+        item.setFld176DlgBnkZaimKnc(CheckInt.cellToBigDecimal(row.getCell(178)));
+        item.setFld177DlgKrdZdlNchl(CheckInt.cellToBigDecimal(row.getCell(179)));
+        item.setFld178DlgKrdZdlKnc(CheckInt.cellToBigDecimal(row.getCell(180)));
+        item.setFld179PrObzNchl(CheckInt.cellToBigDecimal(row.getCell(181)));
+        item.setFld180PrObzKnc(CheckInt.cellToBigDecimal(row.getCell(182)));
 
         em.persist(item);
         em.flush();

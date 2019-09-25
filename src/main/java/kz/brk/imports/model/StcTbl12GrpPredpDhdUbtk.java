@@ -18,13 +18,13 @@ public class StcTbl12GrpPredpDhdUbtk {
   private int id;
   private String idSubclass;
   private int god;
-  private int fld044ObshKolPrdp;
-  private int fld045KolPrdpPrb;
+  private BigDecimal fld044ObshKolPrdp;
+  private BigDecimal fld045KolPrdpPrb;
   private BigDecimal fld046PrcnObshKolPrb;
-  private int fld047SumPrb;
-  private int fld048KolPrdpUbtk;
+  private BigDecimal fld047SumPrb;
+  private BigDecimal fld048KolPrdpUbtk;
   private BigDecimal fld049PrcnObshKolUbtk;
-  private int fld050SumUbtk;
+  private BigDecimal fld050SumUbtk;
   @Builder.Default
   private int relevance = 1;
   @Builder.Default
