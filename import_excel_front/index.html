@@ -59,7 +59,7 @@
             e.preventDefault();
             // alert("download");
             $.ajax({
-                url: 'http://192.168.202.2:8080/brk/api/import/downloadExcel2',
+                url: 'http://localhost:8080/brk/api/import/downloadExcel2',
                 type: 'GET',
                 xhrFields: {
                     responseType: 'blob'
@@ -85,7 +85,7 @@
             var formData = new FormData(this);
 
             $.ajax({
-                url: 'http://192.168.202.2:8080/brk/api/import/upload',
+                url: 'http://localhost:8080/brk/api/import/upload',
                 type: 'POST',
                 data: formData,
                 success: function (data) {

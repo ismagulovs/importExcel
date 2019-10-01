@@ -43,7 +43,7 @@ public class WebService {
     @Consumes("multipart/form-data")
     @Path("upload")
     public Response upload(MultipartFormDataInput input) {
-        return Response.ok("Загрузка завершена").entity(parser.parseExcel(input.getParts().get(0))).build();
+        return Response.ok(parser.parseExcel(input.getParts().get(0))).build();
     }
 
     private static final String FILE_PATH = "C:\\Users\\SultanI\\work\\java\\excel_test.xls";

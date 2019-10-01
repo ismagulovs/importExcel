@@ -53,46 +53,54 @@ public class Parser {
     }
 
     public String parseExcel(InputPart part){
-        if(part.getMediaType().getSubtype().equals("vnd.ms-excel")){
-            try {
+        String msg = null;
+        try {
+            if (part.getMediaType().getSubtype().equals("vnd.ms-excel")) {
                 HSSFWorkbook workbook = new HSSFWorkbook(part.getBody(InputStream.class, null));
                 Sheet sheet = workbook.getSheetAt(0);
-                parseRow(sheet);
+                msg = parseRow(sheet);
                 workbook.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }else if(part.getMediaType().getSubtype().equals("vnd.openxmlformats-officedocument.spreadsheetml.sheet")){
-            try {
+            } else if (part.getMediaType().getSubtype().equals("vnd.openxmlformats-officedocument.spreadsheetml.sheet")) {
                 XSSFWorkbook workbook = new XSSFWorkbook(part.getBody(InputStream.class, null));
                 Sheet sheet = workbook.getSheetAt(0);
-                parseRow(sheet);
+                msg = parseRow(sheet);
                 workbook.close();
-            } catch (IOException e) {
-                e.printStackTrace();
             }
+        }catch (IOException e) {
+            e.printStackTrace();
+            return "Ошибка чтения файла";
         }
-        return "ok";
+        return msg;
     }
 
-    private void parseRow(Sheet sheet){
-
-        updateRelevance.update();
-
-        for(Row row: sheet){
-            if(row.getRowNum() > 7) {
-                if(row.getCell(1) != null){
-                    if (row.getCell(1).getStringCellValue().length() == 5) {
-                        System.out.println(row.getRowNum());
-                        tbl00.parseTbl(row); tbl02.parseTbl(row); tbl03.parseTbl(row); tbl04.parseTbl(row); tbl05.parseTbl(row);
-                        tbl06.parseTbl(row); tbl08.parseTbl(row);tbl10.parseTbl(row); tbl12.parseTbl(row); tbl18.parseTbl(row);
-                        tbl20.parseTbl(row); tbl22.parseTbl(row); tbl24.parseTbl(row); tbl26.parseTbl(row); tbl28.parseTbl(row);
-                        tbl29.parseTbl(row); tbl32.parseTbl(row); tbl34.parseTbl(row); tbl36.parseTbl(row); tbl40.parseTbl(row);
-                        tbl42.parseTbl(row); tbl44.parseTbl(row); tbl46.parseTbl(row);
+    private String parseRow(Sheet sheet){
+        int rowNum = 0;
+        try {
+            updateRelevance.update();
+        }catch (Exception e){
+            e.printStackTrace();
+            return "Ошибка записи. Повторите запрос";
+        }
+        try {
+            for(Row row: sheet){
+                rowNum = row.getRowNum();
+                if(row.getRowNum() > 7) {
+                    if(row.getCell(1) != null){
+                        if (row.getCell(1).getStringCellValue().length() == 5) {
+                            tbl00.parseTbl(row); tbl02.parseTbl(row); tbl03.parseTbl(row); tbl04.parseTbl(row); tbl05.parseTbl(row);
+                            tbl06.parseTbl(row); tbl08.parseTbl(row); tbl10.parseTbl(row); tbl12.parseTbl(row); tbl18.parseTbl(row);
+                            tbl20.parseTbl(row); tbl22.parseTbl(row); tbl24.parseTbl(row); tbl26.parseTbl(row); tbl28.parseTbl(row);
+                            tbl29.parseTbl(row); tbl32.parseTbl(row); tbl34.parseTbl(row); tbl36.parseTbl(row); tbl40.parseTbl(row);
+                            tbl42.parseTbl(row); tbl44.parseTbl(row); tbl46.parseTbl(row);
+                        }
                     }
                 }
             }
+        }catch (Exception e){
+            e.printStackTrace();
+            return "Ошибка в строке "+rowNum;
         }
+        return "Данные загружены";
     }
 
 }
