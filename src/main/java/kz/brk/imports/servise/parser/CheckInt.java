@@ -65,16 +65,16 @@ public class CheckInt {
         }else {
             switch (cell.getCellType()) {
                 case NUMERIC:
-                    return BigDecimal.valueOf(cell.getNumericCellValue());
+                    return new BigDecimal(cell.getNumericCellValue());
                 case STRING: {
                     try {
-                        return BigDecimal.valueOf(Long.parseLong(cell.getStringCellValue().replaceAll("\\s+", "")));
+                        return new BigDecimal(cell.getStringCellValue().replaceAll("\\s+", ""));
                     } catch (Exception e) {
-                        return BigDecimal.valueOf(0);
+                        return new BigDecimal(0);
                     }
                 }
                 default:
-                    return BigDecimal.valueOf(0);
+                    return new BigDecimal(0);
             }
         }
     }
